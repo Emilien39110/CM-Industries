@@ -50,10 +50,13 @@ body {
 }
 
 section{
-    background-color:white;
     color : black;
 }
 
+footer section{
+	display : flex;
+    flex-wrap: nowrap;
+}
 h2{
     margin : 10px ;
 }
@@ -71,12 +74,6 @@ h3{
 .footer{
     border: none;
     font-size:10px;
-}
-
-article{
-    text-align: center;
-    background-color: rgb(185, 185, 185);
-    padding : 20px;
 }
 
 article p{
