@@ -16,6 +16,12 @@
         </nav>
 	</header>
 
+	<main>
+		<?php
+			include "pages/".$page.".php";
+		?>
+	</main>
+
 	<footer>
 		<section>
             <article class="contact">
