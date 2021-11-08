@@ -50,7 +50,6 @@ body {
 }
 
 section{
-    background-color:white;
     color : black;
 }
 
@@ -71,12 +70,6 @@ h3{
 .footer{
     border: none;
     font-size:10px;
-}
-
-article{
-    text-align: center;
-    background-color: rgb(185, 185, 185);
-    padding : 20px;
 }
 
 article p{
