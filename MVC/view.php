@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 	<title>SOPH'IMMO</title>
 	<link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 </head>
@@ -13,6 +14,7 @@
                 <li><a href=".?page=architecture">Architecture</a></li>
                 <li><a href=".?page=location">Location</a></li>
                 <li><a href=".?page=transaction">Transaction</a></li>
+                <li><a href=".?page=honoraire">Honoraires</a></li>
             </ul>
         </nav>
 	</header>
@@ -21,7 +23,20 @@
 		<?php
 			include "pages/".$page.".php";
 		?>
-	</main>
+    	</main>
+                <?php
+        if ($page == "architecture"){
+            echo"coucou";
+        } else if ($page == "location"){
+            echo"loc";
+        } else if ($page == "transaction"){
+           echo"transac";
+        }else if ($page == "honoraire"){
+            displayHono();
+        }else
+            echo "ERROR 404"
+        
+        ?>
 
 	<footer>
 		<section>
