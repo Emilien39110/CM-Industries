@@ -9,6 +9,9 @@ header nav{
 	display: flex;
 	flex-direction: ;
 }
+section{
+	margin-bottom: 20px;
+}
 footer{
-	background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(189,171,131,1) 100%);
+	background: linear-gradient(0deg, rgba(214,214,214,1) 0%, rgba(176,181,180,1) 100%);
 }
