@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-	    <h1>Votre Agence immobilière au plus près de chez vous</h1>
+	    Votre Agence immobilière au plus près de chez vous
         <nav>
             <ul>
                 <a href=".?page=architecture"><li>Architecture</li></a>
@@ -27,7 +27,6 @@
 
 	<footer>
 		<section>
-            <article class="contact">
             <h2>Horaires d'ouverture</h2>
             <table align="center">
                 <tr>
@@ -81,9 +80,10 @@
             <p>Téléphone : 07.61.84.68.48</p>
             <p>Directement à l'agence sur les horaire d'ouverture</p>
                 <p>Rue de Salins</p>
-                <p>25000 PONTARLIER   </p>    
+                <p>25000 PONTARLIER  </p>    
             <p><img src="./IMAGES/insta.png" class="network"/><img src="./IMAGES/facebook.png" class="network"/></p>
             </article>
+
             </section>
 		Emilien BOITOUZET©
 	</footer>
