@@ -27,7 +27,6 @@
 
 	<footer>
 		<section>
-            <article class="contact">
             <h2>Horaires d'ouverture</h2>
             <table align="center">
                 <tr>
@@ -83,7 +82,6 @@
                 <p>Rue de Salins</p>
                 <p>25000 PONTARLIER   </p>    
             <p><img src="../images/insta.png" class="network"/><img src="../images/facebook.png" class="network"/></p>
-            </article>
             </section>
 		Emilien BOITOUZET©
 	</footer>
