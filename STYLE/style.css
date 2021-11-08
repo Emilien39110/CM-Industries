@@ -3,6 +3,7 @@
 	padding: 0px;
 }
 header{
+	text-align: center;
 	background: linear-gradient(90deg, rgba(199,199,199,1) 0%, rgba(135,148,149,1) 50%, rgba(226,235,234,1) 100%);
 	color : white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
