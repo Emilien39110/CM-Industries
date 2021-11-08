@@ -4,11 +4,85 @@
 }
 header{
 	background: linear-gradient(90deg, rgba(199,199,199,1) 0%, rgba(135,148,149,1) 50%, rgba(226,235,234,1) 100%);
+	color : white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
 	}
-header nav{
-	display: flex;
-	flex-direction: ;
+
+nav ul {
+    display : flex;
+    flex-wrap: nowrap;
+    width : 100%;
+    justify-content: space-around ;
+    list-style: none;
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+    color : white;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
+
+nav li {
+    list-style-type: none;
+	display: inline-block;
+	border: solid 1px;
+	color:  white;
+	padding: 20px;
+	margin:  10px;
+	transition: all 0.5s ease;
+}
+
+li:hover {
+	background-color: rgb(99, 98, 98);
+	transform:  rotate(2deg) scale(1.2) ;
+}
+
+nav a:link, nav a:visited{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+body {
+    margin: 2px;
+    padding: 2px;
+}
+
+section{
+    background-color:white;
+    color : black;
+}
+
+h2{
+    margin : 10px ;
+}
+
+h3{
+    font-size: 50px;
+}
+
+#logo{
+    width : 150px;
+    margin-right: 200px;
+    margin-bottom: 0;
+}
+
+.footer{
+    border: none;
+    font-size:10px;
+}
+
+article{
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+    padding : 20px;
+}
+
+article p{
+    text-align: justify;
+}
+
 section{
 	margin-bottom: 20px;
 }
