@@ -82,7 +82,7 @@
             <p>Directement à l'agence sur les horaire d'ouverture</p>
                 <p>Rue de Salins</p>
                 <p>25000 PONTARLIER   </p>    
-            <p><img src="../images/insta.png" class="network"/><img src="../images/facebook.png" class="network"/></p>
+            <p><img src="./IMAGES/insta.png" class="network"/><img src="./IMAGES/facebook.png" class="network"/></p>
             </article>
             </section>
 		Emilien BOITOUZET©
