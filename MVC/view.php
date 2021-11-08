@@ -2,13 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 	<title>SOPH'IMMO</title>
 	<link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 </head>
 <body>
 	<header>
-	    <ce>Votre Agence immobilière au plus près de chez vous</ce>
+	    <h1>Votre Agence immobilière au plus près de chez vous</h1>
         <nav>
             <ul>
                 <li><a href=".?page=architecture">Architecture</a></li>
