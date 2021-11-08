@@ -20,7 +20,7 @@
 
 	<main>
 		<?php
-			include $page.".php";
+			include "page/".$page.".php";
 		?>
     	</main>
 
