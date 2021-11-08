@@ -2,9 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Soph'imo</title>
+	<title>SOPH'IMMO</title>
 </head>
+<header>
+	
+</header>
 <body>
 
 </body>
+<footer>
+	
+</footer>
 </html>
