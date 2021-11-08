@@ -53,6 +53,10 @@ section{
     color : black;
 }
 
+footer section{
+	display : flex;
+    flex-wrap: nowrap;
+}
 h2{
     margin : 10px ;
 }
