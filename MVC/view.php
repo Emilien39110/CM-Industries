@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-	    <ce>Votre Agence immobilière au plus près de chez vous</ce>
+	    Votre Agence immobilière au plus près de chez vous
         <nav>
             <ul>
                 <a href=".?page=architecture"><li>Architecture</li></a>
