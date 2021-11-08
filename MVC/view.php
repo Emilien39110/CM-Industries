@@ -10,10 +10,10 @@
 	    <h1>Votre Agence immobilière au plus près de chez vous</h1>
         <nav>
             <ul>
-                <li><a href=".?page=architecture">Architecture</a></li>
-                <li><a href=".?page=location">Location</a></li>
-                <li><a href=".?page=transaction">Transaction</a></li>
-                <li><a href=".?page=honoraire">Honoraires</a></li>
+                <a href=".?page=architecture"><li>Architecture</li></a>
+                <a href=".?page=location"><li>Location</li></a>
+                <a href=".?page=transaction"><li>Transaction</li></a>
+                <a href=".?page=honoraire"><li>Honoraires</li></a>
             </ul>
         </nav>
 	</header>
