@@ -24,19 +24,7 @@
 			include "pages/".$page.".php";
 		?>
     	</main>
-                <?php
-        if ($page == "architecture"){
-            echo"coucou";
-        } else if ($page == "location"){
-            echo"loc";
-        } else if ($page == "transaction"){
-           echo"transac";
-        }else if ($page == "honoraire"){
-            displayHono();
-        }else
-            echo "ERROR 404"
-        
-        ?>
+
 
 	<footer>
 		<section>
