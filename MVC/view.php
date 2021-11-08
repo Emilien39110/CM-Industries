@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 	<title>SOPH'IMMO</title>
+	<link rel="stylesheet" type="text/css" href="../STYLE/style.css">
 </head>
 <body>
 	<header>
