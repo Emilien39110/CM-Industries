@@ -23,3 +23,13 @@ function DisplayDonnees ($list) {
 		echo "</li>";
 	}
 }
+
+function LoadRdv () {
+	global $c;
+	$sql = "select * from rendez_vous";
+	$result = mysqli_query ($c, $sql);
+	$list = [];
+	while ($row = mysqli_fetch_assoc($result))
+		$list[] = $row; // Ajouter dans la liste
+	return $list;
+}
