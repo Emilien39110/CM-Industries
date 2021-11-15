@@ -1,6 +1,6 @@
 <?php
-	echo "<article>";
+	echo "<section>";
 	LoadLocations();
 	DisplayDonnees ($locations);
-	echo "</article>";
+	echo "</section>";
 ?>
