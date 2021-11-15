@@ -13,7 +13,7 @@ $c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
 
 
 
-	$sql= "INSERT INTO `Location/sell`(`name`, `localisation`, `description`, `price`, `energy`, `greenhouseg`, `location`) VALUES (".$name.", ".$description.", ".$description.", ".$price." , ".$energy." , ".$greenhouseg.", ".$location.")";
-	$result = mysqli_query($c,$sql);
-	header("location: ../PAGES/location.php");
+	$sql= "INSERT INTO `Location/sell`(`name`, `localisation`, `description`, `price`, `energy`, `greenhouseg`, `location`) VALUES ('".$name."', '".$localisation."', '".$description."', ".$price." , '".$energy."' , '".$greenhouseg."', '".$location."')";
+	$result=mysqli_query($c,$sql);
+	header("location: ../../PAGES/location.php");
 	?>
