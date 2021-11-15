@@ -2,13 +2,18 @@
 // Modèle
 
 function LoadLocations () {
-	global $c;
+    global $c;
+    $sql="SELECT * FROM `Location/sell`";
+    $result=mysqli_query($c, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+		var_dump($row);}
+	/* 	global $c;
 	$sql = "SELECT * FROM 'Location/sell'";
-	$result = mysqli_query ($c, $sql);
+	$result = mysqli_query($c, $sql);
 	$list = [];
 	while ($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
-	return $list;
+	return $list; */
 }
 
 function DisplayDonnees ($list) {
