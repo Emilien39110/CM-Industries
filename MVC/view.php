@@ -15,6 +15,7 @@
                 <a href=".?page=transaction"><li>Transaction</li></a>
                 <a href=".?page=honoraire"><li>Honoraires</li></a>
                 <a href=".?page=rendezvous"><li>Prise de rendez-vous</li></a>
+                <a href=".?page=new"><li>Admin</li></a>
             </ul>
         </nav>
 	</header>
