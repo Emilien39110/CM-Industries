@@ -76,6 +76,9 @@ h3{
     border: none;
     font-size:10px;
 }
+article {
+    background-color: rgb(127,127,127) ;
+}
 
 article p{
     text-align: justify;
