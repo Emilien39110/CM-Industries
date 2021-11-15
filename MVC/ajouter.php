@@ -8,7 +8,6 @@
 	$greenhouseg = $_POST['effetserre'];
 	$location = $_POST['location'];
 
-
 	$sql= "insert into trail(name, localisation, description, price, energy, greenhouseg, location)
 		values (".$name.", ".$description.", ".$description.", ".$price." , ".$energy." , ".$greenhouseg.", ".$location.")";
 	mysqli_query($c,$sql);
