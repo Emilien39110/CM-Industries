@@ -9,8 +9,9 @@
         <input type='text' name='description'>
         <label>Prix</label>
         <input type='integer' name='prix'>
-        <label for='choix'>Etiquette énergie</label>
-        <select name='energie' id='choix'>
+
+        <label for='choix1'>Etiquette énergie</label>
+        <select name='energie' id='choix1'>
         <option value=''>--Choisir une option--</option>
         <option value='A'>A</option>
         <option value='B'>B</option>
@@ -18,8 +19,10 @@
         <option value='D'>D</option>
         <option value='E'>E</option>
         <option value='F'>F</option>
-        <label for='choix'>Etiquette effet de serre</label>
-        <select name='energie' id='choix'>
+        </select>
+
+        <label for='choix2'>Etiquette Effet de serre</label>
+        <select name='effetserre' id='choix2'>
         <option value=''>--Choisir une option--</option>
         <option value='A'>A</option>
         <option value='B'>B</option>
@@ -27,11 +30,14 @@
         <option value='D'>D</option>
         <option value='E'>E</option>
         <option value='F'>F</option>
-        <label for='choix' id='ok'>Location/vente</label>
-        <select name='location' id='choix'>
+        </select>
+
+        <label for='choix3' id='ok'>Location/vente</label>
+        <select name='location' id='choix3'>
         <option value=''>--Choisir une option--</option>
-        <option value='1'>Oui</option>
-        <option value='0'>Non</option>
+        <option value='1'>Location</option>
+        <option value='0'>Vente</option>
         <input type='submit' name='action' value='envoyer'/>
+        </select>
     </form>
 </article>
