@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvlle annonce de vente ou de location</h2>
-    <form action='../MVC/ajouter.php' method='POST'>
+    <form action='./MVC/ajouter.php' method='post'>
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
