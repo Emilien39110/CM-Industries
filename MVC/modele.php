@@ -3,7 +3,7 @@
 
 function LoadLocations () {
     global $c;
-    $sql="SELECT * FROM `Location/sell`";
+    $sql="SELECT * FROM `location_vente`";
     $result=mysqli_query($c, $sql);
     while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;

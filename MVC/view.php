@@ -10,6 +10,7 @@
 	    Votre Agence immobilière au plus près de chez vous
         <nav>
             <ul>
+                <a href=".?page=home"><li>Accueil</li></a>
                 <a href=".?page=architecture"><li>Architecture</li></a>
                 <a href=".?page=location"><li>Location</li></a>
                 <a href=".?page=transaction"><li>Transaction</li></a>
