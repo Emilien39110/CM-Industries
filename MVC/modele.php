@@ -3,9 +3,10 @@
 
 function LoadLocations () {
     global $c;
-    $sql="SELECT * FROM `location_vente`";
-    $result=mysqli_query($c, $sql);
-    while($row = mysqli_fetch_assoc($result))
+    $sql = "SELECT * FROM `Location/sell`";
+    $result = mysqli_query($c, $sql);
+	$list = [];
+	while ($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
 	return $list;
 }
@@ -33,4 +34,81 @@ function LoadRdv () {
 	while ($row = mysqli_fetch_assoc($result))
 		$list[] = $row; // Ajouter dans la liste
 	return $list;
+}
+
+function DisplayRdv ($list) {
+	$lundi = [];
+	$mardi = [];
+	$mercredi = [];
+	$jeudi = [];
+	$vendredi = [];
+	$samedi = [];
+	foreach ($list as $key => $value) {
+		if ($value["jour"] == "lundi") {
+			$lundi[] = $value;
+		}
+		if ($value["jour"] == "mardi") {
+			$mardi[] = $value;
+		}
+		if ($value["jour"] == "mercredi") {
+			$mercredi[] = $value;
+		}
+		if ($value["jour"] == "jeudi") {
+			$jeudi[] = $value;
+		}
+		if ($value["jour"] == "vendredi") {
+			$vendredi[] = $value;
+		}
+		if ($value["jour"] == "samedi") {
+			$samedi[] = $value;
+		}
+	}
+	echo "<ul> <tr>";
+	echo "<td> <b>Lundi</b> </td>";
+	for ($i=0; $i < count($lundi); $i++) { 
+		if ($lundi[$i]["etat"] == "libre") {
+			echo "<td>".$lundi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</tr> </ul>";
+	echo "<ul>";
+	echo "<td> <b>mardi</b> </td>";
+	for ($i=0; $i < count($mardi); $i++) { 
+		if ($mardi[$i]["etat"] == "libre") {
+			echo "<td>".$mardi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</ul>";
+	echo "<ul>";
+	echo "<td> <b>mercredi</b> </td>";
+	for ($i=0; $i < count($mercredi); $i++) { 
+		if ($mercredi[$i]["etat"] == "libre") {
+			echo "<td>".$mercredi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</ul>";
+	echo "<ul>";
+	echo "<td> <b>jeudi</b> </td>";
+	for ($i=0; $i < count($jeudi); $i++) { 
+		if ($jeudi[$i]["etat"] == "libre") {
+			echo "<td>".$jeudi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</ul>";
+	echo "<ul>";
+	echo "<td> <b>vendredi</b> </td>";
+	for ($i=0; $i < count($vendredi); $i++) { 
+		if ($vendredi[$i]["etat"] == "libre") {
+			echo "<td>".$vendredi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</ul>";
+	echo "<ul>";
+	echo "<td> <b>samedi</b> </td>";
+	for ($i=0; $i < count($samedi); $i++) { 
+		if ($samedi[$i]["etat"] == "libre") {
+			echo "<td>".$samedi[$i]["horaire"]."h</td>";
+		}
+	}
+	echo "</ul>";
 }

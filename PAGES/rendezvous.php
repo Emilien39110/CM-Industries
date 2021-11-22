@@ -1,6 +1,6 @@
-<section>
+<section id="rdv">
 	<?php
-		print_r($rdv);
+		DisplayRdv ($rdv);
 		// print_r($semaine);
 	?>
 </section>
