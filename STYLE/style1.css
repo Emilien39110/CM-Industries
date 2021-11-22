@@ -79,6 +79,7 @@ h3{
 }
 .background {
     background-color: rgb(135,148,149) ;
+    padding: 10px;
 }
 
 article p{
