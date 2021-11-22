@@ -1,0 +1,28 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.loginErrorMessage {
+	background-color: rgba(255, 0, 0, 1.0);
+	color: white;
+	width : 14vw;
+}
+
+.registerErrorMessage {
+	background-color: rgba(255, 0, 0, 1.0);
+	color: white;
+	width : 14vw;
+}
+
+.formLogin {
+	background-color: grey;
+	width : 12vw;
+	padding : 1vw;
+	border: solid 2px black;
+	list-style: none;
+}
+
+.formLogin p {
+	color : white;
+}

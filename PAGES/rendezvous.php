@@ -1,8 +1,6 @@
-<section id="rdv">
-	Horaire de rendez-vous disponible :
+<section>
 	<?php
-		DisplayRdvLibre ($rdv);
+		print_r($rdv);
 		// print_r($semaine);
-		
 	?>
 </section>

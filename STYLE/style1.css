@@ -33,7 +33,7 @@ nav li {
 	transition: all 0.5s ease;
 }
 
-li:hover {
+#menu:hover {
 	background-color: rgb(99, 98, 98);
 	transform:  rotate(2deg) scale(1.2) ;
 }
@@ -121,13 +121,31 @@ footer{
     height: 300px;
 }
 
-.recherche{
-    margin-top: 10px;
-    margin-right: 5%;
-    background-color: rgb(165,255,149) ;
-    padding: 10px;
+* {
+    padding: 0px;
+    margin: 0px;
 }
-.recherche label{
-    display: flex;
-    flex-direction: column;
+
+.loginErrorMessage {
+    background-color: rgba(255, 0, 0, 1.0);
+    color: white;
+    width : 14vw;
+}
+
+.registerErrorMessage {
+    background-color: rgba(255, 0, 0, 1.0);
+    color: white;
+    width : 14vw;
+}
+
+.formLogin {
+    background-color: grey;
+    width : 12vw;
+    padding : 1vw;
+    border: solid 2px black;
+    list-style: none;
+}
+
+.formLogin p {
+    color : white;
 }
