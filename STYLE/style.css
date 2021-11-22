@@ -33,7 +33,7 @@ nav li {
 	transition: all 0.5s ease;
 }
 
-nav li:hover {
+li:hover {
 	background-color: rgb(99, 98, 98);
 	transform:  rotate(2deg) scale(1.2) ;
 }
@@ -94,10 +94,4 @@ footer{
 .network{
     width: 50px;
     height: 50px;
-}
-
-#rdv ul{
-    list-style: none;
-    margin: 10px;
-    border: 1px solid #333;
 }

@@ -10,13 +10,13 @@
 	    Votre Agence immobilière au plus près de chez vous
         <nav>
             <ul>
-                <a href=".?page=home"><li>Accueil</li></a>
-                <a href=".?page=architecture"><li>Architecture</li></a>
-                <a href=".?page=location"><li>Location</li></a>
-                <a href=".?page=transaction"><li>Transaction</li></a>
-                <a href=".?page=honoraire"><li>Honoraires</li></a>
-                <a href=".?page=rendezvous"><li>Prise de rendez-vous</li></a>
-                <a href=".?page=new"><li>Admin</li></a>
+                <a href=".?page=home"><li id="menu">Accueil</li></a>
+                <a href=".?page=architecture"><li id="menu">Architecture</li></a>
+                <a href=".?page=location"><li id="menu">Location</li></a>
+                <a href=".?page=transaction"><li id="menu">Transaction</li></a>
+                <a href=".?page=honoraire"><li id="menu">Honoraires</li></a>
+                <a href=".?page=rendezvous"><li id="menu">Prise de rendez-vous</li></a>
+                <a href=".?page=new"><li id="menu">Admin</li></a>
             </ul>
         </nav>
 	</header>
@@ -24,6 +24,16 @@
 	<main>
 		<?php
 			include "PAGES/".$page.".php";
+            if (isset($_SESSION["user"])) {
+                echo "<p>".$_SESSION["user"]."</p>";
+                if ($_SESSION["admin"] == 1) {
+                    echo "ADMIN";
+                }
+                include_once("PAGES/logoutForm.php");
+            }else{
+                include_once("PAGES/loginForm.php");
+                include_once("PAGES/registerForm.php");
+            }
 		?>
     	</main>
 
