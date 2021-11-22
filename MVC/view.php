@@ -89,7 +89,10 @@
             <p>Directement à l'agence sur les horaire d'ouverture</p>
                 <p>Rue de Salins</p>
                 <p>25000 PONTARLIER  </p>    
-            <p><img src="./IMAGES/insta.png" class="network"/><img src="./IMAGES/facebook.png" class="network"/></p>
+            <p>
+                <a href="https://www.instagram.com/sophimmo1/?hl=fr"><img src="./IMAGES/insta.png" class="network"/></a>
+                <a href="https://www.facebook.com/Sophimmo-249689356927183"><img src="./IMAGES/facebook.png" class="network"/></a>
+            </p>
         </section>
         </article>
 	</footer>

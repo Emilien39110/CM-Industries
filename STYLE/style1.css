@@ -51,7 +51,6 @@ body {
 }
 
 section{
-    margin-left: 170px;
     color : black;
 }
 
@@ -79,9 +78,6 @@ h3{
 }
 .background {
     background-color: rgb(135,148,149) ;
-    padding: 10px;
-    margin-top :10px ;
-    margin-bottom:10px ;
 }
 
 article p{
@@ -126,11 +122,10 @@ footer{
 }
 
 .recherche{
-    position: fixed;
-    display: inline-block;
-    background: linear-gradient(66deg, rgba(187,187,187,1) 0%, rgba(170,185,169,1) 50%, rgba(81,121,99,1) 100%);
+    margin-top: 10px;
+    margin-right: 5%;
+    background-color: rgb(165,255,149) ;
     padding: 10px;
-    padding-bottom: 500px;
 }
 .recherche label{
     display: flex;
