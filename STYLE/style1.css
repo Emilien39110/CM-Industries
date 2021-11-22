@@ -122,9 +122,9 @@ footer{
 }
 
 .recherche{
-    margin-top: 10px;
-    margin-right: 5%;
-    background-color: rgb(165,255,149) ;
+    position: fixed;
+    display: inline-block;
+    background: linear-gradient(66deg, rgba(187,187,187,1) 0%, rgba(170,185,169,1) 50%, rgba(81,121,99,1) 100%);
     padding: 10px;
 }
 .recherche label{
