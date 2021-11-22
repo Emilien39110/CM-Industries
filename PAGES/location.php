@@ -1,4 +1,4 @@
-<nav>
+<nav class="recherche">
 	<label for='type'>Type</label>
     <select name='Types' id='type'>
     <option value=''>--Choisir une option--</option>
