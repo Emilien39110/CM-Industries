@@ -63,52 +63,34 @@ function DisplayRdv ($list) {
 			$samedi[] = $value;
 		}
 	}
-	echo "<ul> <tr>";
-	echo "<td> <b>Lundi</b> </td>";
-	for ($i=0; $i < count($lundi); $i++) { 
-		if ($lundi[$i]["etat"] == "libre") {
-			echo "<td>".$lundi[$i]["horaire"]."h</td>";
+	$jour = [
+		"lundi" => $lundi,
+		"mardi" => $mardi,
+		"mercredi" => $mercredi,
+		"jeudi" => $jeudi,
+		"vendredi" => $vendredi,
+		"samedi" => $samedi
+	];
+	foreach ($jour as $key => $value) {
+		echo "<ul>";
+		echo "<td> <b>".$key."</b> </td>";
+		for ($i=0; $i < count($value); $i++) { 
+			if ($value[$i]["etat"] == "libre") {
+				echo "<td>".$value[$i]["horaire"]."h</td>";
+			}
+		}
+		echo "</ul>";
+	}
+
+	echo "<form action='./MVC/takerdv.php' method='post'>
+			<select name='horaire' id='horaire-select'>
+				<option value=''> --Selectionner un horaire disponible-- </option>";
+	foreach ($list as $key => $value) {
+		if ($value["etat"] == "libre") {
+			echo "<option value=".$value["idrdv"]."> ".$value["jour"]." ".$value["horaire"]."h </option>";
 		}
 	}
-	echo "</tr> </ul>";
-	echo "<ul>";
-	echo "<td> <b>mardi</b> </td>";
-	for ($i=0; $i < count($mardi); $i++) { 
-		if ($mardi[$i]["etat"] == "libre") {
-			echo "<td>".$mardi[$i]["horaire"]."h</td>";
-		}
-	}
-	echo "</ul>";
-	echo "<ul>";
-	echo "<td> <b>mercredi</b> </td>";
-	for ($i=0; $i < count($mercredi); $i++) { 
-		if ($mercredi[$i]["etat"] == "libre") {
-			echo "<td>".$mercredi[$i]["horaire"]."h</td>";
-		}
-	}
-	echo "</ul>";
-	echo "<ul>";
-	echo "<td> <b>jeudi</b> </td>";
-	for ($i=0; $i < count($jeudi); $i++) { 
-		if ($jeudi[$i]["etat"] == "libre") {
-			echo "<td>".$jeudi[$i]["horaire"]."h</td>";
-		}
-	}
-	echo "</ul>";
-	echo "<ul>";
-	echo "<td> <b>vendredi</b> </td>";
-	for ($i=0; $i < count($vendredi); $i++) { 
-		if ($vendredi[$i]["etat"] == "libre") {
-			echo "<td>".$vendredi[$i]["horaire"]."h</td>";
-		}
-	}
-	echo "</ul>";
-	echo "<ul>";
-	echo "<td> <b>samedi</b> </td>";
-	for ($i=0; $i < count($samedi); $i++) { 
-		if ($samedi[$i]["etat"] == "libre") {
-			echo "<td>".$samedi[$i]["horaire"]."h</td>";
-		}
-	}
-	echo "</ul>";
+	echo "<input type='submit' value='Reserver'>";
+	echo "	</select>
+		  </form>";
 }
