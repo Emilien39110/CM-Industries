@@ -43,6 +43,11 @@
         <input type='submit' name='action' value='envoyer'/>
         </select>
     </form>
+
+    <h2>Modification de rendez-vous</h2>
+    <?php
+        DisplayRdvPris ($rdv);
+    ?>
 </article>
 
 
