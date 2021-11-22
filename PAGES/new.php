@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvlle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post' enctype="multipart/form-data">
+    <form action='./MVC/ajouter.php' method='post' ><!--enctype="multipart/form-data"-->
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -44,3 +44,9 @@
         </select>
     </form>
 </article>
+
+
+<!-- $target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); -->
