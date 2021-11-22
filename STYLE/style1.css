@@ -120,3 +120,14 @@ footer{
     width: 300px;
     height: 300px;
 }
+
+.recherche{
+    margin-top: 10px;
+    margin-right: 5%;
+    background-color: rgb(165,255,149) ;
+    padding: 10px;
+}
+.recherche label{
+    display: flex;
+    flex-direction: column;
+}
