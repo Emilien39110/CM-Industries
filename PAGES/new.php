@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvlle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post'>
+    <form action='./MVC/ajouter.php' method='post' enctype="multipart/form-data">
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -37,6 +37,9 @@
         <option value=''>--Choisir une option--</option>
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
+        </select>
+        <label>Image 1 :</label>
+        <input type='file' name='image'/>
         <input type='submit' name='action' value='envoyer'/>
         </select>
     </form>

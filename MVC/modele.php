@@ -3,10 +3,9 @@
 
 function LoadLocations () {
     global $c;
-    $sql = "SELECT * FROM `Location/sell`";
-    $result = mysqli_query($c, $sql);
-	$list = [];
-	while ($row = mysqli_fetch_assoc($result))
+    $sql="SELECT * FROM `location_vente`";
+    $result=mysqli_query($c, $sql);
+    while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
 	return $list;
 }
@@ -16,8 +15,8 @@ function DisplayDonnees ($list) {
 		echo "<article class='background'>";
 		echo "<h2>".$value["name"]."</h2>";
 		echo "<p><b>Localisation : </b>".$value["localisation"]."</p>";
-		echo "<p><b>Prix :</b> ".$value["description"]."</p>";
-		echo "<p>".$value["price"]."</p>";
+		echo "<p><b>Description :</b> ".$value["description"]."</p>";
+		echo "<p><b>Prix : </b>".$value["price"]." €</p>";
 		echo "<section><p class='gras'>Consommation energie :</p>";
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
 		echo "<section><p class='gras'>GreenHouse :</p>";
