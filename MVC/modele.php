@@ -89,9 +89,17 @@ function DisplayRdvLibre ($list) {
 			echo "<option value=".$value["idrdv"]."> ".$value["jour"]." ".$value["horaire"]."h </option>";
 		}
 	}
-	echo "<input type='submit' value='Reserver'>";
-	echo "	</select>
-		  </form>";
+	echo "</select></br>";
+	echo "<select name='info' id='infordv'>
+			<option value=''>--Selectionner un type de rendez-vous-- </option>
+			<option value='Visite de bien'>Visite de bien</option>
+			<option value='Rendez-vous en agence'>Rendez-vous en agence</option>
+			<option value='Acheter un bien'>Acheter un bien</option>
+			<option value='Louer un bien'>Louer un bien</option>
+			<option value='Estimation'>Estimation</option>
+			</select>";
+	echo "<input type='submit' name='action' value='Reserver'>";
+	echo "</form>";
 }
 
 function DisplayRdvPris ($list) {
@@ -131,10 +139,11 @@ function DisplayRdvPris ($list) {
 	];
 	foreach ($jour as $key => $value) {
 		echo "<ul>";
-		echo "<td> <b>".$key."</b> </td>";
+		echo "<td> <b>".$key."</b> </td></br>";
 		for ($i=0; $i < count($value); $i++) { 
 			if ($value[$i]["etat"] == "pris") {
-				echo "<td>".$value[$i]["horaire"]."h</td>";
+				echo "<td>".$value[$i]["horaire"]."h  </td>";
+				echo "<td>".$value[$i]["info"]."</td></br>";
 			}
 		}
 		echo "</ul>";
@@ -147,6 +156,7 @@ function DisplayRdvPris ($list) {
 		if ($value["etat"] == "pris") {
 			echo "<option value=".$value["idrdv"]."> ".$value["jour"]." ".$value["horaire"]."h </option>";
 		}
+			
 	}
 	echo "<input type='submit' value='Liberer'>";
 	echo "	</select>
