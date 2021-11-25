@@ -15,8 +15,8 @@ function DisplayDonnees ($list) {
 		echo "<article class='background'>";
 		echo "<h2>".$value["name"]."</h2>";
 		echo "<p><b>Localisation : </b>".$value["localisation"]."</p>";
-		echo "<p><b>Description :</b> ".$value["description"]."</p>";
-		echo "<p><b>Prix : </b>".$value["price"]." €</p>";
+		echo "<p><b>Prix :</b> ".$value["description"]."</p>";
+		echo "<p>".$value["price"]."</p>";
 		echo "<section><p class='gras'>Consommation energie :</p>";
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
 		echo "<section><p class='gras'>GreenHouse :</p>";
@@ -35,52 +35,8 @@ function LoadRdv () {
 	return $list;
 }
 
-function DisplayRdvLibre ($list) {
-	$lundi = [];
-	$mardi = [];
-	$mercredi = [];
-	$jeudi = [];
-	$vendredi = [];
-	$samedi = [];
-	foreach ($list as $key => $value) {
-		if ($value["jour"] == "lundi") {
-			$lundi[] = $value;
-		}
-		if ($value["jour"] == "mardi") {
-			$mardi[] = $value;
-		}
-		if ($value["jour"] == "mercredi") {
-			$mercredi[] = $value;
-		}
-		if ($value["jour"] == "jeudi") {
-			$jeudi[] = $value;
-		}
-		if ($value["jour"] == "vendredi") {
-			$vendredi[] = $value;
-		}
-		if ($value["jour"] == "samedi") {
-			$samedi[] = $value;
-		}
-	}
-	$jour = [
-		"lundi" => $lundi,
-		"mardi" => $mardi,
-		"mercredi" => $mercredi,
-		"jeudi" => $jeudi,
-		"vendredi" => $vendredi,
-		"samedi" => $samedi
-	];
-	foreach ($jour as $key => $value) {
-		echo "<ul>";
-		echo "<td> <b>".$key."</b> </td>";
-		for ($i=0; $i < count($value); $i++) { 
-			if ($value[$i]["etat"] == "libre") {
-				echo "<td>".$value[$i]["horaire"]."h</td>";
-			}
-		}
-		echo "</ul>";
-	}
-
+function logInCheck($usernameF1_, $passwordF1_) {
+	global $c;
 	echo "<form action='./MVC/takerdv.php' method='post'>
 			<select name='horaire' id='horaire-select'>
 				<option value=''> --Selectionner un horaire disponible-- </option>";
@@ -157,8 +113,33 @@ function DisplayRdvPris ($list) {
 			echo "<option value=".$value["idrdv"]."> ".$value["jour"]." ".$value["horaire"]."h </option>";
 		}
 			
+	$sqlF1 = "SELECT * FROM `login` WHERE login = '".$usernameF1_."'";
+	$resultF1 = mysqli_query($c, $sqlF1);
+
+	$row = mysqli_fetch_assoc($resultF1);
+    return $passwordF1_ == $row["password"];
+}
+
+function isAdmin($usernameF2_){
+	global $c;
+
+    $sqlF2 = "SELECT * FROM `login` WHERE login = '".$usernameF2_."'";
+    $resultF2 = mysqli_query($c, $sqlF2);
+
+    $row = mysqli_fetch_assoc($resultF2);
+    return $row["adminpermissions"] == 1;
+}
+
+function connection($usernameF1_,$passwordF1_){
+	$coCheck = logInCheck($usernameF1_,$passwordF1_);
+	
+	if ($coCheck){
+		$hasAdmin = isAdmin($usernameF1_);
+		if ($hasAdmin) {
+			$_SESSION['admin'] = 1;
+		}
+		$_SESSION['user'] = $usernameF1_;
+
 	}
-	echo "<input type='submit' value='Liberer'>";
-	echo "	</select>
-		  </form>";
+	// header("Location: .");
 }

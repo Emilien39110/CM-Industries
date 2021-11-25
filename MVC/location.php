@@ -1,1 +1,1 @@
-Coucou comment tu vas, moi ça va en ce moment. Après il se peut que même si je dit que tout va bien tout va mal... C'est le paradoxe de la vie. Pourquoi quand nous sommes vivants nous ne sommes pas mort, pourquoi l'Australie c'est si horrible. Pourquoi pour respirer il faut inspirer puis expirer et pas expirer puis inspirer :/ c
+coucou
