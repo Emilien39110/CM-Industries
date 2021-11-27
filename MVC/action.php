@@ -89,7 +89,7 @@ if (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0) {
 }
 
 //Fermer la parenthèse de la condition si il y a un prix minimum ou maximum
-if ((isset($_POST["minimumPrice"]) OR isset($_POST["maximumPrice"])) AND ($_POST["minimumPrice"] != 0 OR $_POST["maximumPrice"] != 0)) {
+if ((isset($_POST["minimumPrice"]) and $_POST["minimumPrice"] != 0) or (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0)) {
 	$sqlFilterRequest = $sqlFilterRequest.")";
 }
 
