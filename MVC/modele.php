@@ -144,3 +144,27 @@ function connection($usernameF1_,$passwordF1_){
 	}
 	// header("Location: .");
 }
+
+function useFilter($inputName, $sqlCondition) {
+	global $sql;
+	global $sqlFilterCount;
+	global $_POST;
+
+	if (isset($_POST[$inputName])) {
+		if ($sqlFilterCount == 0) {
+			$sql = $sql." WHERE ".$sqlCondition;
+		}else{
+			$sql = $sql." OR ".$sqlCondition;
+		}
+		$sqlFilterCount = $sqlFilterCount + 1;
+	}
+}
+
+function insertFilterCheckBox($inputName) {
+	global $_POST;
+	if (isset($_POST[$inputName])) {
+		echo "<input type='checkbox' name=".$inputName." checked>";
+	}else{
+		echo "<input type='checkbox' name=".$inputName.">";
+	}
+}
