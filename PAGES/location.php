@@ -1,11 +1,4 @@
-<nav>
-    <form method="post" action="index.php" class="formLogin">
-        <p>A</p>
-        <?php insertFilterCheckBox("energyA");?>
-        <p>B</p>
-        <?php insertFilterCheckBox("energyB");?>
-        <input type="submit" name="sendFilter" value="Envoyer">
-    </form>
+<nav class="recherche">
 
     <form action='./MVC/usefilter.php' method='post' >
     	<label for='type'>Type</label>
@@ -42,6 +35,8 @@
         </select>
     </form>
 </nav>
+
+
 <?php
 	echo "<section>";
     if (isset($_SESSION['requetefiltre'])) DisplayDonnees ($_SESSION['requetefiltre']);
