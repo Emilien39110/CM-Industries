@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvlle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post'>
+    <form action='./MVC/ajouter.php' method='post' ><!--enctype="multipart/form-data"-->
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -37,7 +37,21 @@
         <option value=''>--Choisir une option--</option>
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
+        </select>
+        <label>Image 1 :</label>
+        <input type='file' name='image'/>
         <input type='submit' name='action' value='envoyer'/>
         </select>
     </form>
+
+    <h2>Modification de rendez-vous</h2>
+    <?php
+        DisplayRdvPris ($rdv);
+    ?>
 </article>
+
+
+<!-- $target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); -->

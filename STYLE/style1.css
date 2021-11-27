@@ -2,6 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 }
+
 header{
 	text-align: center;
 	background: linear-gradient(90deg, rgba(199,199,199,1) 0%, rgba(135,148,149,1) 50%, rgba(226,235,234,1) 100%);
@@ -51,7 +52,6 @@ body {
 }
 
 section{
-    margin-left: 170px;
     color : black;
 }
 
@@ -79,9 +79,6 @@ h3{
 }
 .background {
     background-color: rgb(135,148,149) ;
-    padding: 10px;
-    margin-top :10px ;
-    margin-bottom:10px ;
 }
 
 article p{
@@ -126,13 +123,52 @@ footer{
 }
 
 .recherche{
-    position: fixed;
-    display: inline-block;
-    background: linear-gradient(66deg, rgba(187,187,187,1) 0%, rgba(170,185,169,1) 50%, rgba(81,121,99,1) 100%);
+    margin-top: 10px;
+    margin-right: 5%;
+    background-color: rgb(165,255,149) ;
     padding: 10px;
-    padding-bottom: 141px;
 }
 .recherche label{
     display: flex;
     flex-direction: column;
+}
+
+.actu img {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actu h3{
+    font-size: 30px;
+    border-bottom: black solid 1px;
+    margin: 10px;
+    padding: 10px;
+    background-color:rgb(199,199,199) ;
+}
+
+#home{
+    background-color:rgb(199,199,199) ;
+    padding: 10px;
+}
+
+.honoraire {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  
+.honoraire th, td {
+    padding: 20px;
+    border : 1px solid black;
+    border-collapse: collapse;
+    border: 3px solid black;
+    text-align: center;
+    background-color:rgb(199,199,199) ;
+  }
+
+.honoraire_title{
+    text-align: center;
+    margin : 10px;
 }

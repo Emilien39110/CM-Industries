@@ -1,4 +1,4 @@
-<section>
+<section class='honoraire_title'>
     <h1>HONORAIRES DE TRANSACTION</h1>
 </section>
 <table class='honoraire'>
@@ -27,9 +27,10 @@
         <td>5.00%</td>
     </tr>
 </table>
-<section>
+<section class='honoraire_title'>
     <h1>HONORAIRES DE LOCATION</h1>
 </section>
+
 <table class='honoraire'>
     <tr>
         <td>Visite et constitution du dossier</td>
