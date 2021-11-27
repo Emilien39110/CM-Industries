@@ -176,5 +176,5 @@ function insertFilterNumber($inputName) {
 	if (isset($_POST[$inputName])) {
 		echo " value=".$_POST[$inputName];
 	}
-	echo ">";
+	echo " min=0>";
 }

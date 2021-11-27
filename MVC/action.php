@@ -70,7 +70,7 @@ $sqlFilterCount = 0;
 //-----PRIX MINIMUM ET MAXIMUM--------------------------------------
 //Prix minimum
 if (isset($_POST["minimumPrice"]) and $_POST["minimumPrice"] != 0) {
-	if ($sqlFilterCount == 0) {
+	if ($sqlFilterCount == 0) { //Si on est la première condition, on doit insérer un "WHERE"
 		$sqlFilterRequest = $sqlFilterRequest." WHERE (price >".$_POST["minimumPrice"];
 	}else{
 		$sqlFilterRequest = $sqlFilterRequest." AND (price >".$_POST["minimumPrice"];
@@ -80,7 +80,7 @@ if (isset($_POST["minimumPrice"]) and $_POST["minimumPrice"] != 0) {
 
 //Prix maximum
 if (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0) {
-	if ($sqlFilterCount == 0) {
+	if ($sqlFilterCount == 0) { //Si on est la première condition, on doit insérer un "WHERE"
 		$sqlFilterRequest = $sqlFilterRequest." WHERE (price <".$_POST["maximumPrice"];
 	}else{
 		$sqlFilterRequest = $sqlFilterRequest." AND price <".$_POST["maximumPrice"];
@@ -92,4 +92,6 @@ if (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0) {
 if ((isset($_POST["minimumPrice"]) OR isset($_POST["maximumPrice"])) AND ($_POST["minimumPrice"] != 0 OR $_POST["maximumPrice"] != 0)) {
 	$sqlFilterRequest = $sqlFilterRequest.")";
 }
+
+
 //------------------------------------------------------------------
