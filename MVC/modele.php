@@ -153,9 +153,9 @@ function useFilter($inputName, $sqlCondition) {
 
 	if (isset($_POST[$inputName])) {
 		if ($sqlFilterCount == 0) {
-			$sql = $sql." WHERE ".$sqlCondition;
+			$sqlFilterCount = $sqlFilterCount." WHERE ".$sqlCondition;
 		}else{
-			$sql = $sql." OR ".$sqlCondition;
+			$sqlFilterCount = $sqlFilterCount." OR ".$sqlCondition;
 		}
 		$sqlFilterCount = $sqlFilterCount + 1;
 	}
