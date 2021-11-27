@@ -112,6 +112,7 @@ function DisplayRdvPris ($list) {
 		if ($value["etat"] == "pris") {
 			echo "<option value=".$value["idrdv"]."> ".$value["jour"]." ".$value["horaire"]."h </option>";
 		}
+	}
 			
 	$sqlF1 = "SELECT * FROM `login` WHERE login = '".$usernameF1_."'";
 	$resultF1 = mysqli_query($c, $sqlF1);
