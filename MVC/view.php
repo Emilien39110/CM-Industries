@@ -8,6 +8,15 @@
 <body>
 	<header>
 	    Votre Agence immobilière au plus près de chez vous
+        <a href=".?page=connexion"><h6>Se connecter</h6></a>
+        <?php
+        if (isset($_SESSION["user"])) {
+            echo "<h7>".$_SESSION["user"]."</h7>";
+            /*if ($_SESSION["admin"] == 1) {
+                echo "ADMIN";
+            }*/
+        }
+        ?>
         <nav>
             <ul>
                 <a href=".?page=home"><li id="menu">Accueil</li></a>
@@ -24,16 +33,7 @@
 	<main>
 		<?php
 			include "PAGES/".$page.".php";
-            if (isset($_SESSION["user"])) {
-                echo "<p>".$_SESSION["user"]."</p>";
-                if ($_SESSION["admin"] == 1) {
-                    echo "ADMIN";
-                }
-                include_once("PAGES/logoutForm.php");
-            }else{
-                include_once("PAGES/loginForm.php");
-                include_once("PAGES/registerForm.php");
-            }
+
 		?>
     	</main>
 
