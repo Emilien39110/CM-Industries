@@ -161,4 +161,55 @@ function DisplayRdvPris ($list) {
 	echo "<input type='submit' value='Liberer'>";
 	echo "	</select>
 		  </form>";
+
+	// header("Location: .");
+}
+
+//Fonctions du filtre
+function useFilter($inputName, $sqlCondition) {
+	global $sqlFilterRequest;
+	global $sqlFilterCount;
+	global $_POST;
+
+	if (isset($_POST[$inputName])) {
+		if ($sqlFilterCount == 0) {
+			$sqlFilterCount = $sqlFilterCount." WHERE ".$sqlCondition;
+		}else{
+			$sqlFilterCount = $sqlFilterCount." OR ".$sqlCondition;
+		}
+		$sqlFilterCount = $sqlFilterCount + 1;
+	}
+}
+
+function insertFilterCheckBox($inputName) {
+	global $_POST;
+	echo "<input type='checkbox' name=".$inputName;
+	if (isset($_POST[$inputName])) {
+		echo " checked";
+	}
+	echo ">";
+}
+
+function useFilter($inputName, $sqlCondition) {
+	global $sql;
+	global $sqlFilterCount;
+	global $_POST;
+
+	if (isset($_POST[$inputName])) {
+		if ($sqlFilterCount == 0) {
+			$sql = $sql." WHERE ".$sqlCondition;
+		}else{
+			$sql = $sql." OR ".$sqlCondition;
+		}
+		$sqlFilterCount = $sqlFilterCount + 1;
+	}
+}
+
+function insertFilterNumber($inputName) {
+	global $_POST;
+	echo "<input type='number' name=".$inputName;
+	if (isset($_POST[$inputName])) {
+		echo " value=".$_POST[$inputName];
+	}
+	echo " min=0>";
 }
