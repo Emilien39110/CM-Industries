@@ -3,7 +3,16 @@
 
 function LoadLocations () {
     global $c;
-    $sql="SELECT * FROM `location_vente`";
+    $sql="SELECT * FROM `location_vente` WHERE location = 1";
+    $result=mysqli_query($c, $sql);
+    while($row = mysqli_fetch_assoc($result))
+		$list[] = $row;
+	return $list;
+}
+
+function LoadTransactions () {
+    global $c;
+    $sql="SELECT * FROM `location_vente` WHERE location = 0";
     $result=mysqli_query($c, $sql);
     while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
@@ -163,22 +172,6 @@ function DisplayRdvPris ($list) {
 		  </form>";
 
 	// header("Location: .");
-}
-
-//Fonctions du filtre
-function useFilter($inputName, $sqlCondition) {
-	global $sqlFilterRequest;
-	global $sqlFilterCount;
-	global $_POST;
-
-	if (isset($_POST[$inputName])) {
-		if ($sqlFilterCount == 0) {
-			$sqlFilterCount = $sqlFilterCount." WHERE ".$sqlCondition;
-		}else{
-			$sqlFilterCount = $sqlFilterCount." OR ".$sqlCondition;
-		}
-		$sqlFilterCount = $sqlFilterCount + 1;
-	}
 }
 
 function insertFilterCheckBox($inputName) {

@@ -6,6 +6,7 @@ if (isset($_GET['page']))
 	$page = $_GET['page'];
 
 $locations = LoadLocations ();
+$transactions = LoadTransactions ();
 
 $rdv = LoadRdv();
 

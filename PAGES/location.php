@@ -1,6 +1,6 @@
 <nav class="recherche">
 
-    <form action='./MVC/usefilter.php' method='post' >
+    <form action='./MVC/useFilterLoc.php' method='post' >
     	<label for='type'>Type</label>
         <select name='type' id='type'>
         <option value=''>--Choisir une option--</option>
