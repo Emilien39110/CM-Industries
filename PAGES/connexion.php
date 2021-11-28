@@ -19,3 +19,4 @@ else {
     else if (!isset($_SESSION["user"]))
         $_SESSION["state"]="Se déconnecter";
 }
+

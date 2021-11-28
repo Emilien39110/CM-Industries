@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>SOPH'IMMO</title>
-	<link rel="stylesheet" type="text/css" href="STYLE/style1.css">
+	<link rel="stylesheet" type="text/css" href="./STYLE/style1.css">
 </head>
 <body>
 	<header>
@@ -33,13 +33,13 @@
         ?>
         <nav>
             <ul>
-                <a href=".?page=home"><li id="menu">Accueil</li></a>
-                <a href=".?page=architecture"><li id="menu">Architecture</li></a>
-                <a href=".?page=location"><li id="menu">Location</li></a>
-                <a href=".?page=transaction"><li id="menu">Transaction</li></a>
-                <a href=".?page=honoraire"><li id="menu">Honoraires</li></a>
-                <a href=".?page=rendezvous"><li id="menu">Prise de rendez-vous</li></a>
-                <a href=".?page=new"><li id="menu">Admin</li></a>
+                <a href=".?page=home"><li>Accueil</li></a>
+                <a href=".?page=architecture"><li>Architecture</li></a>
+                <a href=".?page=location"><li>Location</li></a>
+                <a href=".?page=transaction"><li>Transaction</li></a>
+                <a href=".?page=honoraire"><li>Honoraires</li></a>
+                <a href=".?page=rendezvous"><li>Prise de rendez-vous</li></a>
+                <a href=".?page=new"><li>Admin</li></a>
             </ul>
         </nav>
 	</header>
@@ -47,7 +47,6 @@
 	<main>
 		<?php
 			include "PAGES/".$page.".php";
-
 		?>
     	</main>
 
@@ -113,7 +112,10 @@
             <p>Directement à l'agence sur les horaire d'ouverture</p>
                 <p>Rue de Salins</p>
                 <p>25000 PONTARLIER  </p>    
-            <p><img src="./IMAGES/insta.png" class="network"/><img src="./IMAGES/facebook.png" class="network"/></p>
+            <p>
+                <a href="https://www.instagram.com/sophimmo1/?hl=fr"><img src="./IMAGES/insta.png" class="network"/></a>
+                <a href="https://www.facebook.com/Sophimmo-249689356927183"><img src="./IMAGES/facebook.png" class="network"/></a>
+            </p>
         </section>
         </article>
 	</footer>
