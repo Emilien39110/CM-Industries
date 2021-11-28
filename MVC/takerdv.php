@@ -3,9 +3,15 @@
 
 	$c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
 	mysqli_set_charset($c, "utf8");	
+
+	var_dump($_POST['info']);
 	
-	$sql= "UPDATE rendez_vous SET etat='pris', info='".$_POST['info']."' WHERE idrdv=" .$_POST['horaire'];
-	$result=mysqli_query($c,$sql);
+	if ($_POST['info'] == '')
+		{echo "<p>Merci de saisir un motif de rendez-vous</p>";
+	}
+	else {
+		$sql= "UPDATE rendez_vous SET etat='pris', info='".$_POST['info']."' WHERE idrdv=" .$_POST['horaire'];
+		$result=mysqli_query($c,$sql);}
 
 	$adresse = $_SERVER['REQUEST_URI'];
 	$script_courant = basename($_SERVER["SCRIPT_FILENAME"], '.php') . ".php";
