@@ -10,3 +10,13 @@
         include_once("PAGES/registerForm.php");
     }
 
+
+if (!isset($_SESSION["state"]))
+    $_SESSION["state"]= "";
+else {
+    if (isset($_SESSION["user"]))
+        $_SESSION["state"]="Se connecter";
+    else if (!isset($_SESSION["user"]))
+        $_SESSION["state"]="Se déconnecter";
+}
+
