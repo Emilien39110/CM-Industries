@@ -62,3 +62,7 @@ if(isset($_POST['logOutButton'])) {
 	unset($_SESSION['user']);
 	header("Location: .");
 }
+
+/*if (isset($_GET['page=connexion'])){
+	unset($_SESSION['user']);
+}*/

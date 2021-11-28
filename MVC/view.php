@@ -1,3 +1,6 @@
+<?php
+//unset($_SESSION['state']);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,18 @@
 <body>
 	<header>
 	    Votre Agence immobilière au plus près de chez vous
-        <a href=".?page=connexion"><h6>Se connecter</h6></a>
+        <a href=".?page=connexion">
+            <?php
+            if (isset($_SESSION['user'])){
+                echo "</br><form method='post'><input type='submit' name='logOutButton' value='Se déconnecter' id='deco'></form></br>";
+                if (isset($_POST['logOutButton']))
+                    unset($_SESSION['user']);
+            }else{
+                echo "</br><h7>Se connecter<h7></br>";
+            }
+
+            // echo  "</br>".$_SESSION['state']."</br>";
+            ?></a>
         <?php
         if (isset($_SESSION["user"])) {
             echo "<h7>".$_SESSION["user"]."</h7>";
