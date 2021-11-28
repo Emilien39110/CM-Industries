@@ -10,7 +10,6 @@ header{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
 	}
-
 nav ul {
     display : flex;
     flex-wrap: nowrap;
@@ -153,6 +152,13 @@ footer{
     padding: 10px;
 }
 
+.formLogin p {
+    color : white;
+}
+
+#deco {
+    color : red;
+
 .honoraire {
     display: flex;
     justify-content: space-around;
@@ -171,4 +177,5 @@ footer{
 .honoraire_title{
     text-align: center;
     margin : 10px;
+
 }

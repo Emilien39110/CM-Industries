@@ -1,4 +1,15 @@
 <?php
+	
+	//A DECOMMENTER QUAND DROITS-----------------------------------------
+	/*
+		mkdir("../IMAGES/".$_POST['nom']);
+	$uploaddir = '../IMAGES/'.$_POST['nom'].'/';
+	$uploadfile = $uploaddir . basename($_FILES['fichierimage']['name']);
+	move_uploaded_file($_FILES['fichierimage']['tmp_name'], $uploadfile);
+	
+	*/
+	//-------------------------------------------------------------------
+
 
 	$c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
 	mysqli_set_charset($c, "utf8");	

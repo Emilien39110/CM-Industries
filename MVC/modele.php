@@ -30,6 +30,24 @@ function DisplayDonnees ($list) {
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
 		echo "<section><p class='gras'>GreenHouse :</p>";
 		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
+		
+		//-------------------------------------------------------------------------------------------------------
+		//A DECOMMENTER QUAND DROITS-----------------------------------------
+
+		/*
+		if (is_dir('./IMAGES/'.$value['name'])) { 
+			$tablofichier =scandir('./IMAGES/'.$value['name']);
+			foreach ($tablofichier as  $elmtablofichier ){
+				if ($elmtablofichier != '.' && $elmtablofichier != '..') {
+					echo "<section><p class='gras'>Image du bien :</p>";
+					echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";	
+				}
+			}
+		}
+		*/
+		
+		//-------------------------------------------------------------------------------------------------------
+
 		echo "</article>";
 	}
 }

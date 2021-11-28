@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvelle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post' ><!--enctype="multipart/form-data"-->
+    <form action='./MVC/ajouter.php' method='post' > <!--enctype="multipart/form-data"-->
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -20,6 +20,17 @@
         <option value='E'>E</option>
         <option value='F'>F</option>
         </select>
+
+
+
+        <!--enctype="multipart/form-data"-->
+                <label>image</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage'>
+        <!--enctype="multipart/form-data"-->
+
+
+
 
         <label for='choix2'>Etiquette Effet de serre</label>
         <select name='effetserre' id='choix2'>
