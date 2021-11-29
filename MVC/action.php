@@ -5,8 +5,8 @@ $page = "home";
 if (isset($_GET['page'])) 
 	$page = $_GET['page'];
 
-$locations = LoadLocations ();
-$transactions = LoadTransactions ();
+$locations = LoadLocations();
+$transactions = LoadTransactions();
 
 $rdv = LoadRdv();
 
@@ -62,6 +62,7 @@ if ($register) {
 //Se déconnecter
 if(isset($_POST['logOutButton'])) {
 	unset($_SESSION['user']);
+	unset($_SESSION['admin']);
 	header("Location: .");
 }
 
