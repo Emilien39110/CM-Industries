@@ -21,11 +21,6 @@
 			else if ($_POST['surface'] == "normal") $sql = $sql." AND surface >= 20 AND surface < 50";
 			else if ($_POST['surface'] == "grand")$sql = $sql." AND surface >= 50";
 		}
-		foreach ($_POST as $key => $value) {
-			/*if ($value != "" and $key != "action") {
-				$sql = $sql.$condition.$key." = ".$value;
-			}*/
-		}
 	}
 	//var_dump($sql);
 	$result=mysqli_query($c,$sql);
