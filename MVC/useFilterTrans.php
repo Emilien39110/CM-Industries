@@ -1,28 +1,24 @@
 <?php
-
-	
 	session_start();
 	$c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
 	mysqli_set_charset($c, "utf8");	
 	
 	$sql = "SELECT * FROM `location_vente` WHERE location = 0";
 	
-	$condition = " AND ";
 	if (isset ($_POST)) {
-		//echo $_POST['price'];
-		if ($_POST['price'] != ""){
-			if ($_POST['price'] == 500) $sql = $sql.$condition."price"." < ".$_POST['price'];
-					else if ($_POST['price'] == 800) $sql = $sql.$condition."price"." < ".$_POST['price']." AND "."price > 500";
-					else $sql = $sql.$condition."price"." >= ".$_POST['price'];
+		//Si on a définit un prix minimum, on ajoute la condition
+		if ($_POST['minimumPrice'] > 0) {
+			$sql=$sql.' AND price >= '.$_POST['minimumPrice'];
 		}
-		foreach ($_POST as $key => $value) {
-			/*if ($value != "" and $key != "action") {
-				$sql = $sql.$condition.$key." = ".$value;
-			}*/
-			$condition = " AND ";
+		$_SESSION['minimumPriceFilter'] = $_POST['minimumPrice'];
+
+		//Si on a définit un prix maximum, on ajoute la condition
+		if ($_POST['maximumPrice'] > 0) {
+			$sql=$sql.' AND price <= '.$_POST['maximumPrice'];
 		}
+		$_SESSION['maximumPriceFilter'] = $_POST['maximumPrice'];
 	}
-	//var_dump($sql);
+
 	$result=mysqli_query($c,$sql);
 	while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
@@ -38,4 +34,5 @@
 	$a_remplacer_par = "?page=transaction";
 	$resultat = str_replace($morceau_a_remplacer, $a_remplacer_par, $adresse);
 	header("location:" . $resultat);
+
 ?>
