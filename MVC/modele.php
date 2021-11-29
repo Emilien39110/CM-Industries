@@ -124,9 +124,7 @@ function DisplayRdvLibre ($list) {
 	echo "</form>";
 }
 
-    }
-    // header("Location: .");
-}
+
 
 function logInCheck($usernameF1_, $passwordF1_) {
     global $c;
