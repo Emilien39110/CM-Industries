@@ -7,19 +7,24 @@
 	
 	$sql = "SELECT * FROM `location_vente` WHERE location = 1";
 	
-	$condition = " AND ";
 	if (isset ($_POST)) {
+		// Filtre Prix
 		//echo $_POST['price'];
 		if ($_POST['price'] != ""){
-			if ($_POST['price'] == 500) $sql = $sql.$condition."price"." < ".$_POST['price'];
-					else if ($_POST['price'] == 800) $sql = $sql.$condition."price"." < ".$_POST['price']." AND "."price > 500";
-					else $sql = $sql.$condition."price"." >= ".$_POST['price'];
+			if ($_POST['price'] == 500) $sql = $sql." AND price < ".$_POST['price'];
+					else if ($_POST['price'] == 800) $sql = $sql." AND price < ".$_POST['price']." AND price > 500";
+					else $sql = $sql." AND price"." >= ".$_POST['price'];
+		}
+		// Filtre Surface
+		if ($_POST['surface'] != ""){
+			if ($_POST['surface'] == "petit") $sql = $sql." AND surface < 20";
+			else if ($_POST['surface'] == "normal") $sql = $sql." AND surface >= 20 AND surface < 50";
+			else if ($_POST['surface'] == "grand")$sql = $sql." AND surface >= 50";
 		}
 		foreach ($_POST as $key => $value) {
 			/*if ($value != "" and $key != "action") {
 				$sql = $sql.$condition.$key." = ".$value;
 			}*/
-			$condition = " AND ";
 		}
 	}
 	//var_dump($sql);
