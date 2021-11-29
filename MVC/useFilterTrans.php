@@ -52,13 +52,6 @@
 			}
 			$_SESSION['terrainFilter_Trans'] = True;
 		}
-		
-		// Filtre Surface
-		if ($_POST['surface'] != ""){
-			if ($_POST['surface'] == "petit") $sql = $sql." AND surface < 20";
-			else if ($_POST['surface'] == "normal") $sql = $sql." AND surface >= 20 AND surface < 50";
-			else if ($_POST['surface'] == "grand")$sql = $sql." AND surface >= 50";
-		}
 
 		if ($firstTypeCondition) {
 			$sql = $sql.')';
