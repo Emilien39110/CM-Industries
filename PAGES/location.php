@@ -29,8 +29,8 @@
         <select name='surface' id='surface'>
         <option value=''>--Choisir une option--</option>
         <option value='petit'>- 20 m² </option>
-        <option value='normal'> de 20m² à 50m²</option>
-        <option value='grand'>+ 50m²</option>
+        <option value='normal'> de 20m² à 30m²</option>
+        <option value='grand'>+ 30m²</option>
         <input type='submit' name='action' value='Appliquer les filtres'/>
         </select>
     </form>
