@@ -12,7 +12,7 @@ function LoadLocations () {
 
 function LoadTransactions () {
     global $c;
-    $sql="SELECT * FROM `location_vente` WHERE location = 0 and vendu = 0";
+    $sql="SELECT * FROM `location_vente` WHERE location = 0 AND vendu = 0";
     $result=mysqli_query($c, $sql);
     while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
