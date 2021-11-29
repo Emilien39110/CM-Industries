@@ -123,19 +123,7 @@ function DisplayRdvLibre ($list) {
 	echo "<input type='submit' name='action' value='Reserver'>";
 	echo "</form>";
 }
-function connection($usernameF1_,$passwordF1_){
-    $coCheck = logInCheck($usernameF1_,$passwordF1_);
-    
-    if ($coCheck){
-        $hasAdmin = isAdmin($usernameF1_);
-        if ($hasAdmin) {
-            $_SESSION['admin'] = 1;
-        }
-        $_SESSION['user'] = $usernameF1_;
 
-    }
-    // header("Location: .");
-}
 function logInCheck($usernameF1_, $passwordF1_) {
     global $c;
     $sqlF1 = "SELECT * FROM `login` WHERE login = '".$usernameF1_."'";
@@ -151,6 +139,20 @@ function isAdmin($usernameF2_){
 
     $row = mysqli_fetch_assoc($resultF2);
     return $row["adminpermissions"] == 1;
+}
+
+function connection($usernameF1_,$passwordF1_){
+    $coCheck = logInCheck($usernameF1_,$passwordF1_);
+    
+    if ($coCheck){
+        $hasAdmin = isAdmin($usernameF1_);
+        if ($hasAdmin) {
+            $_SESSION['admin'] = 1;
+        }
+        $_SESSION['user'] = $usernameF1_;
+
+    }
+    // header("Location: .");
 }
 
 function DisplayRdvPris ($list) {
