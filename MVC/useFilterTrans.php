@@ -7,16 +7,55 @@
 	
 	if (isset ($_POST)) {
 		//Si on a définit un prix minimum, on ajoute la condition
-		if ($_POST['minimumPrice'] > 0) {
-			$sql=$sql.' AND price >= '.$_POST['minimumPrice'];
+		if ($_POST['minimumPrice_Trans'] > 0) {
+			$sql=$sql.' AND price >= '.$_POST['minimumPrice_Trans'];
 		}
-		$_SESSION['minimumPriceFilter'] = $_POST['minimumPrice'];
+		$_SESSION['minimumPriceFilter_Trans'] = $_POST['minimumPrice_Trans'];
 
 		//Si on a définit un prix maximum, on ajoute la condition
-		if ($_POST['maximumPrice'] > 0) {
-			$sql=$sql.' AND price <= '.$_POST['maximumPrice'];
+		if ($_POST['maximumPrice_Trans'] > 0) {
+			$sql=$sql.' AND price <= '.$_POST['maximumPrice_Trans'];
 		}
-		$_SESSION['maximumPriceFilter'] = $_POST['maximumPrice'];
+		$_SESSION['maximumPriceFilter_Trans'] = $_POST['maximumPrice_Trans'];
+
+		$firstTypeCondition = False;
+		unset($_SESSION['maisonFilter_Trans']);
+		unset($_SESSION['appartFilter_Trans']);
+		unset($_SESSION['terrainFilter_Trans']);
+
+		if (isset($_POST['maisonFilter_Trans'])) {
+			if ($firstTypeCondition == False) {
+				$sql=$sql." AND (type = 'maison'";
+				$firstTypeCondition = True;
+			}else{
+				$sql=$sql." OR type = 'maison'";
+			}
+			$_SESSION['maisonFilter_Trans'] = True;
+		}
+
+		if (isset($_POST['appartFilter_Trans'])) {
+			if ($firstTypeCondition == False) {
+				$sql=$sql." AND (type = 'appartement'";
+				$firstTypeCondition = True;
+			}else{
+				$sql=$sql." OR type = 'appartement'";
+			}
+			$_SESSION['appartFilter_Trans'] = True;
+		}
+
+		if (isset($_POST['terrainFilter_Trans'])) {
+			if ($firstTypeCondition == False) {
+				$sql=$sql." AND (type = 'terrain'";
+				$firstTypeCondition = True;
+			}else{
+				$sql=$sql." OR type = 'terrain'";
+			}
+			$_SESSION['terrainFilter_Trans'] = True;
+		}
+
+		if ($firstTypeCondition) {
+			$sql = $sql.')';
+		}
 	}
 
 	$result=mysqli_query($c,$sql);
