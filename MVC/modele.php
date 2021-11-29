@@ -31,10 +31,7 @@ function DisplayDonnees ($list) {
 		echo "<section class= 'imgbien'><p class='gras'>GreenHouse :</p>";
 		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
 		
-		//-------------------------------------------------------------------------------------------------------
-		//A DECOMMENTER QUAND DROITS-----------------------------------------
-
-		/*
+//------------------------------------------------------------------------------------
 		if (is_dir('./IMAGES/'.$value['name'])) { 
 			$tablofichier =scandir('./IMAGES/'.$value['name']);
 			foreach ($tablofichier as  $elmtablofichier ){
@@ -44,9 +41,7 @@ function DisplayDonnees ($list) {
 				}
 			}
 		}
-		*/
-		
-		//-------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 
 		echo "</article>";
 	}
