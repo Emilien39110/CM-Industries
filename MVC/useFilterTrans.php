@@ -13,7 +13,7 @@
 		if ($_POST['price'] != ""){
 			if ($_POST['price'] == 500) $sql = $sql.$condition."price"." < ".$_POST['price'];
 					else if ($_POST['price'] == 800) $sql = $sql.$condition."price"." < ".$_POST['price']." AND "."price > 500";
-					else $sql = $sql.$condition."price"." >= ".$_POST['price'];
+					else $sql = $sql.$condition."price >= ".$_POST['price'];
 		}
 		foreach ($_POST as $key => $value) {
 			/*if ($value != "" and $key != "action") {

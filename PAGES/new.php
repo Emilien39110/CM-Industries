@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvelle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post' > <!--enctype="multipart/form-data"-->
+    <form action='./MVC/ajouter.php' method='post' ><!--enctype="multipart/form-data"-->
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -9,6 +9,8 @@
         <input type='text' name='description'>
         <label>Prix</label>
         <input type='integer' name='prix'>
+        <label>Surface</label>
+        <input type='integer' name='surface'>
 
         <label for='choix1'>Etiquette énergie</label>
         <select name='energie' id='choix1'>
@@ -20,17 +22,6 @@
         <option value='E'>E</option>
         <option value='F'>F</option>
         </select>
-
-
-
-        <!--enctype="multipart/form-data"-->
-                <label>image</label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
-        <!--enctype="multipart/form-data"-->
-
-
-
 
         <label for='choix2'>Etiquette Effet de serre</label>
         <select name='effetserre' id='choix2'>
@@ -49,6 +40,15 @@
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
         </select>
+
+        <label for='choix4'>Type de bien</label>
+        <select name='type' id='choix4'>
+        <option value=''>--Choisir une option--</option>
+        <option value='maison'>Maison</option>
+        <option value='Appartement'>Appartement</option>
+        <option value='terrain'>Terrain</option>
+        </select>
+
         <label>Image 1 :</label>
         <input type='file' name='image'/>
         <input type='submit' name='action' value='envoyer'/>
