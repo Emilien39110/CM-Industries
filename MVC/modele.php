@@ -124,6 +124,10 @@ function DisplayRdvLibre ($list) {
 	echo "</form>";
 }
 
+    }
+    // header("Location: .");
+}
+
 function logInCheck($usernameF1_, $passwordF1_) {
     global $c;
     $sqlF1 = "SELECT * FROM `login` WHERE login = '".$usernameF1_."'";
@@ -131,14 +135,14 @@ function logInCheck($usernameF1_, $passwordF1_) {
     $row = mysqli_fetch_assoc($resultF1);
     return $passwordF1_ == $row["password"];
 }
+
 function isAdmin($usernameF2_){
     global $c;
-
     $sqlF2 = "SELECT * FROM `login` WHERE login = '".$usernameF2_."'";
     $resultF2 = mysqli_query($c, $sqlF2);
-
     $row = mysqli_fetch_assoc($resultF2);
-    return $row["adminpermissions"] == 1;
+    return ($row["adminpermissions"] == 1) ;
+
 }
 
 function connection($usernameF1_,$passwordF1_){

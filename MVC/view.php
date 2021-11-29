@@ -23,23 +23,25 @@
 
             // echo  "</br>".$_SESSION['state']."</br>";
             ?></a>
-        <?php
-        if (isset($_SESSION["user"])) {
-            echo "<h7>".$_SESSION["user"]."</h7>";
-            /*if ($_SESSION["admin"] == 1) {
-                echo "ADMIN";
-            }*/
-        }
-        ?>
+
         <nav class="menu">
             <ul>
                 <a href=".?page=home"><li>Accueil</li></a>
                 <a href=".?page=architecture"><li>Architecture</li></a>
                 <a href=".?page=location"><li>Location</li></a>
                 <a href=".?page=transaction"><li>Transaction</li></a>
-                <a href=".?page=honoraire"><li>Honoraires</li></a>
-                <a href=".?page=rendezvous"><li>Prise de rendez-vous</li></a>
-                <a href=".?page=new"><li>Admin</li></a>
+                <a href=".?page=honoraire"><li>Honoraires</li></a>              
+                <?php
+        if (isset($_SESSION["user"])){
+            echo "<a href='.?page=rendezvous'><li>Prise de rendez-vous</li></a>";
+            if (isset($_SESSION["admin"])){
+                if ($_SESSION['admin'] == 1) {
+                        echo "<a href='.?page=new'><li>Admin</li></a>";
+                }
+            }
+
+        }
+        ?>
             </ul>
         </nav>
 	</header>
