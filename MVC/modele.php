@@ -26,27 +26,22 @@ function DisplayDonnees ($list) {
 		echo "<p><b>Localisation : </b>".$value["localisation"]."</p>";
 		echo "<p><b>Description :</b> ".$value["description"]."</p>";
 		echo "<p><b>Prix : </b>".$value["price"]." €</p>";
-		echo "<section><p class='gras'>Consommation energie :</p>";
+		echo "<section class= 'imgbien'><p class='gras'>Consommation energie :</p>";
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
-		echo "<section><p class='gras'>GreenHouse :</p>";
+		echo "<section class= 'imgbien'><p class='gras'>GreenHouse :</p>";
 		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
 		
-		//-------------------------------------------------------------------------------------------------------
-		//A DECOMMENTER QUAND DROITS-----------------------------------------
-
-		/*
+//------------------------------------------------------------------------------------
 		if (is_dir('./IMAGES/'.$value['name'])) { 
 			$tablofichier =scandir('./IMAGES/'.$value['name']);
 			foreach ($tablofichier as  $elmtablofichier ){
 				if ($elmtablofichier != '.' && $elmtablofichier != '..') {
-					echo "<section><p class='gras'>Image du bien :</p>";
+					echo "<section class= 'imgbien'><p class='gras'>Image du bien :</p>";
 					echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";	
 				}
 			}
 		}
-		*/
-		
-		//-------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 
 		echo "</article>";
 	}
@@ -128,15 +123,6 @@ function DisplayRdvLibre ($list) {
 	echo "<input type='submit' name='action' value='Reserver'>";
 	echo "</form>";
 }
-function connection($usernameF1_,$passwordF1_){
-    $coCheck = logInCheck($usernameF1_,$passwordF1_);
-    
-    if ($coCheck){
-        $hasAdmin = isAdmin($usernameF1_);
-        if ($hasAdmin) {
-            $_SESSION['admin'] = 1;
-        }
-        $_SESSION['user'] = $usernameF1_;
 
     }
     // header("Location: .");
@@ -157,6 +143,20 @@ function isAdmin($usernameF2_){
     $row = mysqli_fetch_assoc($resultF2);
     return ($row["adminpermissions"] == 1) ;
 
+}
+
+function connection($usernameF1_,$passwordF1_){
+    $coCheck = logInCheck($usernameF1_,$passwordF1_);
+    
+    if ($coCheck){
+        $hasAdmin = isAdmin($usernameF1_);
+        if ($hasAdmin) {
+            $_SESSION['admin'] = 1;
+        }
+        $_SESSION['user'] = $usernameF1_;
+
+    }
+    // header("Location: .");
 }
 
 function DisplayRdvPris ($list) {
