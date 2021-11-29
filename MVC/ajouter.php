@@ -14,7 +14,12 @@
 	$adresse = $_SERVER['REQUEST_URI'];
 	$script_courant = basename($_SERVER["SCRIPT_FILENAME"], '.php') . ".php";
 	$morceau_a_remplacer = "MVC/" . $script_courant;
-	$a_remplacer_par = "?page=location";
+	if ($_POST['location'] == 1) {
+		$a_remplacer_par = "?page=location";
+	}
+	else {
+		$a_remplacer_par = "?page=transaction";
+	}
 	$resultat = str_replace($morceau_a_remplacer, $a_remplacer_par, $adresse);
 	header("location:" . $resultat);
 ?>
