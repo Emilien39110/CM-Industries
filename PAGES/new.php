@@ -35,17 +35,17 @@
         <option value='F'>F</option>
         </select>
 
-        <label>image</label>
+        <label>image 1</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
+        <input type='file' name='fichierimage1'>
 
-        <!--<label>image 2 (champ optionnel)</label>
+        <label>image 2</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
+        <input type='file' name='fichierimage2'>
 
-        <label>image 3 (champ optionnel)</label>
+        <label>image 3</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'> -->
+        <input type='file' name='fichierimage3'>
 
         <label for='choix4'>Type de bien</label>
         <select name='type' id='choix4'>
