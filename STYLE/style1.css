@@ -33,7 +33,7 @@ nav li {
 	transition: all 0.5s ease;
 }
 
-li:hover {
+.menu li:hover {
 	background-color: rgb(99, 98, 98);
 	transform:  rotate(2deg) scale(1.2) ;
 }
@@ -95,6 +95,10 @@ article section {
     font-weight: bold ;
 }
 
+.imgbien img{
+    height: 300px;
+}
+
 article h2{
     font-size: 30px;
     text-align: center;
@@ -151,13 +155,22 @@ footer{
     background-color:rgb(199,199,199) ;
     padding: 10px;
 }
-
+.formLogin {
+    background-color: grey;
+    width : 12vw;
+    padding : 1vw;
+    border: solid 2px black;
+    list-style: none;
+}
 .formLogin p {
     color : white;
 }
 
 #deco {
     color : red;
+    font-size : 32px;
+    background: grey;
+}
 
 .honoraire {
     display: flex;

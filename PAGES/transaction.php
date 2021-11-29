@@ -9,13 +9,21 @@
         <option value='Terrain'>Terrain</option>
         </select>
 
-    	<label for='price'>Prix</label>
-        <select name='price' id='price'>
-        <option value=''>--Choisir une option--</option>
-        <option value='500'>- 500€</option>
-        <option value='800'>de 501€ à 800€</option>
-        <option value='801'>+ 800€</option>
-        </select>
+    	<label>Prix</label>
+        <?php 
+        //Affiche les prix minimum et maximum en gardant la valeur précédente entrée
+        if (isset($_SESSION['minimumPriceFilter'])) {
+            echo "<input type='number' name='minimumPrice' min=0 value=".$_SESSION['minimumPriceFilter'].">";
+        }else{
+            echo "<input type='number' name='minimumPrice' min=0 value=0>";
+        }
+
+        if (isset($_SESSION['maximumPriceFilter'])) {
+            echo "<input type='number' name='maximumPrice' min=0 value=".$_SESSION['maximumPriceFilter'].">";
+        }else{
+            echo "<input type='number' name='maximumPrice' min=0 value=0>";
+        }
+        ?>
 
     	<label for='localisation'>Localisation</label>
         <select name='localisation' id='localisation'>
