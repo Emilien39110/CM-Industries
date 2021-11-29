@@ -1,6 +1,6 @@
 <article class="form">
     <h2>Ajouter une nouvelle annonce de vente ou de location</h2>
-    <form action='./MVC/ajouter.php' method='post' > <!--enctype="multipart/form-data"-->
+    <form enctype="multipart/form-data" action='./MVC/ajouter.php' method='post' >
         <label>Nom de l'annonce</label>
         <input type='text' name='nom'>
         <label>Localisation</label>
@@ -9,6 +9,8 @@
         <input type='text' name='description'>
         <label>Prix</label>
         <input type='integer' name='prix'>
+        <label>Surface</label>
+        <input type='integer' name='surface'>
 
         <label for='choix1'>Etiquette énergie</label>
         <select name='energie' id='choix1'>
@@ -33,31 +35,34 @@
         <option value='F'>F</option>
         </select>
 
-
-        <!--enctype="multipart/form-data"-->
-        <!--voir images optionelles -->
-        <label>image 1 (champ optionnel)</label>
+        <label>image 1</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
-        <!--enctype="multipart/form-data"-->
+        <input type='file' name='fichierimage1'>
 
-        <label>image 2 (champ optionnel)</label>
+        <label>image 2</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
-        <!--enctype="multipart/form-data"-->
+        <input type='file' name='fichierimage2'>
 
-        <label>image 3 (champ optionnel)</label>
+        <label>image 3</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
-        <!--enctype="multipart/form-data"-->
+        <input type='file' name='fichierimage3'>
 
+        <label for='choix4'>Type de bien</label>
+        <select name='type' id='choix4'>
+        <option value=''>--Choisir une option--</option>
+        <option value='maison'>Maison</option>
+        <option value='Appartement'>Appartement</option>
+        <option value='terrain'>Terrain</option>
+        </select>
 
         <label for='choix3' id='ok'>Location/vente</label>
         <select name='location' id='choix3'>
         <option value=''>--Choisir une option--</option>
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
+        <input type='submit' name='action' value='envoyer'/>
         </select>
+
 
     </form>
 
