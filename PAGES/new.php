@@ -43,6 +43,26 @@
         <option value='F'>F</option>
         </select>
 
+        <label>image 1</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage1'>
+
+        <label>image 2</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage2'>
+
+        <label>image 3</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage3'>
+
+        <label for='choix4'>Type de bien</label>
+        <select name='type' id='choix4'>
+        <option value=''>--Choisir une option--</option>
+        <option value='maison'>Maison</option>
+        <option value='Appartement'>Appartement</option>
+        <option value='terrain'>Terrain</option>
+        </select>
+
         <label for='choix3' id='ok'>Location/vente</label>
         <select name='location' id='choix3'>
         <option value=''>--Choisir une option--</option>
@@ -60,7 +80,20 @@
         DisplayRdvPris ($rdv);
     ?>
 </article>
-
+<article>
+    <h2>Vente d'un bien</h2>
+    <form action="PAGES/vendre.php" method="POST">
+        <select id="id" name="id" required>
+            <?php
+                DisplayGoodsSellList($locations);
+                DisplayGoodsSellList($transactions);
+            ?>
+        </select>
+        <div>
+            <input name="sumbit" type="submit" value="Vendre"/>
+        </div>
+    </form>
+</article>
 
 <!-- $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
