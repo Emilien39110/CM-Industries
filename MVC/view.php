@@ -31,7 +31,7 @@
             }*/
         }
         ?>
-        <nav>
+        <nav class="menu">
             <ul>
                 <a href=".?page=home"><li>Accueil</li></a>
                 <a href=".?page=architecture"><li>Architecture</li></a>
