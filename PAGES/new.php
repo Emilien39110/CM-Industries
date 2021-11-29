@@ -22,16 +22,6 @@
         </select>
 
 
-
-        <!--enctype="multipart/form-data"-->
-                <label>image</label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
-        <input type='file' name='fichierimage'>
-        <!--enctype="multipart/form-data"-->
-
-
-
-
         <label for='choix2'>Etiquette Effet de serre</label>
         <select name='effetserre' id='choix2'>
         <option value=''>--Choisir une option--</option>
@@ -43,16 +33,32 @@
         <option value='F'>F</option>
         </select>
 
+
+        <!--enctype="multipart/form-data"-->
+        <!--voir images optionelles -->
+        <label>image 1 (champ optionnel)</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage'>
+        <!--enctype="multipart/form-data"-->
+
+        <label>image 2 (champ optionnel)</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage'>
+        <!--enctype="multipart/form-data"-->
+
+        <label>image 3 (champ optionnel)</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+        <input type='file' name='fichierimage'>
+        <!--enctype="multipart/form-data"-->
+
+
         <label for='choix3' id='ok'>Location/vente</label>
         <select name='location' id='choix3'>
         <option value=''>--Choisir une option--</option>
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
         </select>
-        <label>Image 1 :</label>
-        <input type='file' name='image'/>
-        <input type='submit' name='action' value='envoyer'/>
-        </select>
+
     </form>
 
     <h2>Modification de rendez-vous</h2>
