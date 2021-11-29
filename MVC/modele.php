@@ -3,7 +3,7 @@
 
 function LoadLocations () {
     global $c;
-    $sql="SELECT * FROM `location_vente` WHERE location = 1";
+    $sql="SELECT * FROM `location_vente` WHERE location = 1 and vendu = 0";
     $result=mysqli_query($c, $sql);
     while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
@@ -12,7 +12,7 @@ function LoadLocations () {
 
 function LoadTransactions () {
     global $c;
-    $sql="SELECT * FROM `location_vente` WHERE location = 0";
+    $sql="SELECT * FROM `location_vente` WHERE location = 0 and vendu = 0";
     $result=mysqli_query($c, $sql);
     while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;
@@ -251,4 +251,11 @@ function insertFilterNumber($inputName) {
 		echo " value=".$_POST[$inputName];
 	}
 	echo " min=0>";
+}
+
+function DisplayGoodsSellList($list){
+	// echo "toto";
+	foreach($list as $goods){
+		echo "<option value=".$goods["idhouse"].">".$goods["name"]."</option>";
+	}
 }

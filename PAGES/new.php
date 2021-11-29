@@ -71,7 +71,20 @@
         DisplayRdvPris ($rdv);
     ?>
 </article>
-
+<article>
+    <h2>Vente d'un bien</h2>
+    <form action="PAGES/vendre.php" method="POST">
+        <select id="id" name="id" required>
+            <?php
+                DisplayGoodsSellList($locations);
+                DisplayGoodsSellList($transactions);
+            ?>
+        </select>
+        <div>
+            <input name="sumbit" type="submit" value="Vendre"/>
+        </div>
+    </form>
+</article>
 
 <!-- $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
