@@ -30,11 +30,6 @@ function DisplayDonnees ($list) {
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
 		echo "<section><p class='gras'>GreenHouse :</p>";
 		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
-		
-		//-------------------------------------------------------------------------------------------------------
-		//A DECOMMENTER QUAND DROITS-----------------------------------------
-
-		/*
 		if (is_dir('./IMAGES/'.$value['name'])) { 
 			$tablofichier =scandir('./IMAGES/'.$value['name']);
 			foreach ($tablofichier as  $elmtablofichier ){
@@ -44,8 +39,6 @@ function DisplayDonnees ($list) {
 				}
 			}
 		}
-		*/
-		
 		//-------------------------------------------------------------------------------------------------------
 
 		echo "</article>";
@@ -119,11 +112,11 @@ function DisplayRdvLibre ($list) {
 	echo "</select></br>";
 	echo "<select name='info' id='infordv'>
 			<option value=''>--Selectionner un type de rendez-vous-- </option>
-			<option value='Visite de bien'>Visite de bien</option>
-			<option value='Rendez-vous en agence'>Rendez-vous en agence</option>
-			<option value='Acheter un bien'>Acheter un bien</option>
-			<option value='Louer un bien'>Louer un bien</option>
-			<option value='Estimation'>Estimation</option>
+			<option value='Visite de bien '>Visite de bien</option>
+			<option value='Rendez-vous en agence '>Rendez-vous en agence</option>
+			<option value='Acheter un bien '>Acheter un bien</option>
+			<option value='Louer un bien '>Louer un bien</option>
+			<option value='Estimation '>Estimation</option>
 			</select>";
 	if(isset($_SESSION['error_type']))
 		echo "<p>".$_SESSION['error_type']."</p>";
@@ -140,7 +133,8 @@ function connection($usernameF1_,$passwordF1_){
         }
         $_SESSION['user'] = $usernameF1_;
 
-
+	}
+}
 
 function logInCheck($usernameF1_, $passwordF1_) {
     global $c;
@@ -200,7 +194,8 @@ function DisplayRdvPris ($list) {
 		for ($i=0; $i < count($value); $i++) { 
 			if ($value[$i]["etat"] == "pris") {
 				echo "<td>".$value[$i]["horaire"]."h  </td>";
-				echo "<td>".$value[$i]["info"]."</td></br>";
+				echo "<td>".$value[$i]["info"]."</td>";
+				echo "<td>".$value[$i]["mail"]."</td></br>";
 			}
 		}
 		echo "</ul>";
@@ -261,3 +256,4 @@ function DisplayGoodsSellList($list){
 		echo "<option value=".$goods["idhouse"].">".$goods["name"]."</option>";
 	}
 }
+?>

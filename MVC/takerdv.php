@@ -8,7 +8,7 @@
 		{$_SESSION['error_type'] ="Merci de saisir un motif de rendez-vous";
 	}
 	else {
-		$sql= "UPDATE rendez_vous SET etat='pris', info='".$_POST['info']."' WHERE idrdv=" .$_POST['horaire'];
+		$sql= "UPDATE rendez_vous SET etat='pris', info='".$_POST['info']."', mail= '".$_SESSION['user']."' WHERE idrdv=" .$_POST['horaire'];
 		$result=mysqli_query($c,$sql);
 		if (isset($_SESSION['error_type']))
 			unset($_SESSION['error_type']);
