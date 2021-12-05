@@ -55,6 +55,20 @@ function LoadRdv () {
 	return $list;
 }
 
+function DisplayLocalisation ($list) {
+	$Avant = "";
+	echo "<label for='localisation'>Localisation</label>
+        <select name='localisation' id='localisation'>";
+        echo "<option value=''>--Choisir une option--</option>";
+	foreach ($list as $key => $value) {
+		if ($value["localisation"] != $Avant) {
+			echo "<option value='".$value["localisation"]."'> ".$value["localisation"]." </option>";
+		}
+		$Avant = $value["localisation"];
+	}
+	echo "</select>";
+}
+
 function DisplayRdvLibre ($list) {
 	$lundi = [];
 	$mardi = [];
