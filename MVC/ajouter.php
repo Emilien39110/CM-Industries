@@ -24,5 +24,5 @@
 		$a_remplacer_par = "?page=transaction";
 	}
 	$resultat = str_replace($morceau_a_remplacer, $a_remplacer_par, $adresse);
-	//header("location:" . $resultat);
+	header("location:" . $resultat);
 ?>
