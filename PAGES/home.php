@@ -11,5 +11,5 @@
 
 <h1>Votre agence</h1>
 <section id="home">
-	<p>Votre agence immobilière vous propose des services classiques tout en proposant des services d’architecture sans frais. Pour un bien acheté ayant besoin de rafraichissement, notre agence peut vous fournir des plans et devis détaillés, tout cela compris dans les honoraires. Pour l’achat d’un terrain, notre agence immobilière vous proposera aussi les services d’architecture, ainsi qu’un accompagnement tout au long de la réalisation du projet en vous mettant en contact avec des partenaires fiables, ce service ayant pour but de faciliter l’achat de logements ou de terrains.</p>
+	<p>Votre agence immobilière vous propose des services classiques tout en proposant des services d’architecture sans frais. Pour un bien acheté ayant besoin de rafraichissement, notre agence peut vous fournir des plans et devis détaillés, tout cela compris dans les honoraires. Pour l’achat d’un terrain, notre agence immobilière vous proposera aussi les services d’architecture, ainsi qu’un accompagnement tout au long de la réalisation du projet en vous mettant en contact avec des partenaires fiables, ce service ayant pour but de faciliter l’achat de logements ou de terrains. Pour toute prise de rendez, il faut vous créer un compte.</p>
 </section>

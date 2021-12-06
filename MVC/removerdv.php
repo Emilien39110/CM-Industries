@@ -2,7 +2,7 @@
 
 	$c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
 	mysqli_set_charset($c, "utf8");	
-	$sql= "UPDATE rendez_vous SET etat='libre', info='' WHERE idrdv= ".$_POST['horaire'];
+	$sql= "UPDATE rendez_vous SET etat='libre', info='', mail='' WHERE idrdv= ".$_POST['horaire'];
 	$result=mysqli_query($c,$sql);
 	
 	$adresse = $_SERVER['REQUEST_URI'];

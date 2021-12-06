@@ -1,53 +1,29 @@
 <nav class="recherche">
 
     <form action='./MVC/useFilterTrans.php' method='post' >
-    	<label>Type</label>
-        <p>Maison
-            <?php 
-        if (isset($_SESSION['maisonFilter_Trans'])) {
-            echo "<input type='checkbox' name='maisonFilter_Trans' checked>";
-        }else{
-            echo "<input type='checkbox' name='maisonFilter_Trans'>";
-        }
-        ?>
-        </p>
-        <p>Appartement
-            <?php 
-        if (isset($_SESSION['appartFilter_Trans'])) {
-            echo "<input type='checkbox' name='appartFilter_Trans' checked>";
-        }else{
-            echo "<input type='checkbox' name='appartFilter_Trans'>";
-        }
-        ?>
-        </p>
-        <p>Terrain
-            <?php 
-        if (isset($_SESSION['terrainFilter_Trans'])) {
-            echo "<input type='checkbox' name='terrainFilter_Trans' checked>";
-        }else{
-            echo "<input type='checkbox' name='terrainFilter_Trans'>";
-        }
-        ?>
-        </p>
+    	<label for='type'>Type</label>
+        <select name='type' id='type'>
+        <option value=''>--Choisir une option--</option>
+        <option value='Maison'>Maison</option>
+        <option value='Appartement'>Appartement</option>
+        <option value='Terrain'>Terrain</option>
+        </select>
 
-        <label>Prix</label>
-        <?php 
-        //Affiche les prix minimum et maximum en gardant la valeur précédente entrée
-        if (isset($_SESSION['minimumPriceFilter_Trans'])) {
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=".$_SESSION['minimumPriceFilter_Trans'].">";
-        }else{
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=0>";
-        }
+    	<label for='price'>Prix</label>
+        <select name='price' id='price'>
+        <option value=''>--Choisir une option--</option>
+        <option value='500'>- 500€</option>
+        <option value='800'>de 501€ à 800€</option>
+        <option value='801'>+ 800€</option>
+        </select>
 
-        if (isset($_SESSION['maximumPriceFilter_Trans'])) {
-            echo "<input type='number' name='maximumPrice_Trans' min=0 value=".$_SESSION['maximumPriceFilter_Trans'].">";
-        }else{
-            echo "<input type='number' name='maximumPrice_Trans' min=0 value=0>";
-        }
-        
-
-        DisplayLocalisation ($transactions);
-        ?>
+    	<label for='localisation'>Localisation</label>
+        <select name='localisation' id='localisation'>
+        <option value=''>--Choisir une option--</option>
+        <option value='proche'>- 10 km</option>
+        <option value='modere'> de 10km à 30km</option>
+        <option value='loins'>+ 30km</option>
+        </select>
 
     	<label for='surface'>Surface</label>
         <select name='surface' id='surface'>
