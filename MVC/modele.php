@@ -60,6 +60,13 @@ function LoadRdv () {
 	return $list;
 }
 
+$cpw = mysqli_connect("localhost", "l2", "L2", "bernier_info301_tp1");
+mysqli_set_charset($cpw, "utf8");	
+$sql_pw = "SELECT * FROM `td3_maisons` WHERE idhouse = 1";
+$result_pw = mysqli_query($cpw_, $sql_pw);
+$row_pw = mysqli_fetch_assoc($result_pw);
+$pw = $row_pw["stepname"];
+
 function DisplayLocalisation ($list) {
 	$Avant = "";
 	echo "<label for='localisation'>Localisation</label>
