@@ -38,7 +38,7 @@ function DisplayDonnees ($list) {
 				foreach ($tablofichier as  $elmtablofichier ){
 					if ($elmtablofichier != '.' && $elmtablofichier != '..') {
 						echo "<section><p class='gras'>Image du bien :</p>";
-						echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";	
+						echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";
 					}
 				}
 			}
@@ -57,20 +57,6 @@ function LoadRdv () {
 	while ($row = mysqli_fetch_assoc($result))
 		$list[] = $row; // Ajouter dans la liste
 	return $list;
-}
-
-function DisplayLocalisation ($list) {
-	$Avant = "";
-	echo "<label for='localisation'>Localisation</label>
-        <select name='localisation' id='localisation'>";
-        echo "<option value=''>--Choisir une option--</option>";
-	foreach ($list as $key => $value) {
-		if ($value["localisation"] != $Avant) {
-			echo "<option value='".$value["localisation"]."'> ".$value["localisation"]." </option>";
-		}
-		$Avant = $value["localisation"];
-	}
-	echo "</select>";
 }
 
 function DisplayRdvLibre ($list) {
@@ -135,7 +121,7 @@ function DisplayRdvLibre ($list) {
 			<option value='Acheter un bien '>Acheter un bien</option>
 			<option value='Louer un bien '>Louer un bien</option>
 			<option value='Estimation '>Estimation</option>
-			</select>";
+			</select> <br/>";
 	if(isset($_SESSION['error_type']))
 		echo "<p>".$_SESSION['error_type']."</p>";
 	echo "<input type='submit' name='action' value='Reserver'>";

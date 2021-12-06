@@ -113,10 +113,11 @@
             <p>Téléphone : 07.61.84.68.48</p>
             <p>Directement à l'agence sur les horaire d'ouverture</p>
                 <p>Rue de Salins</p>
-                <p>25000 PONTARLIER  </p>    
+                <p>25300 PONTARLIER  </p>    
             <p>
                 <a href="https://www.instagram.com/sophimmo1/?hl=fr"><img src="./IMAGES/insta.png" class="network"/></a>
                 <a href="https://www.facebook.com/Sophimmo-249689356927183"><img src="./IMAGES/facebook.png" class="network"/></a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.728498853055!2d6.3391884154824485!3d46.908057679144605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478da3334c4a79ad%3A0xfe044134c0525881!2sRue%20de%20Salins%2C%2025300%20Pontarlier!5e0!3m2!1sfr!2sfr!4v1638793049820!5m2!1sfr!2sfr" width="400" height="300" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
             </p>
         </section>
         </article>

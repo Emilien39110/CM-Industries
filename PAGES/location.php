@@ -45,10 +45,15 @@
         }else{
             echo "<input type='number' name='maximumPrice_Trans' min=0 value=0>";
         }
-        
-
-    	DisplayLocalisation ($locations);
         ?>
+
+    	<label for='localisation'>Localisation</label>
+        <select name='localisation' id='localisation'>
+        <option value=''>--Choisir une option--</option>
+        <option value='proche'>- 10 km</option>
+        <option value='modere'> de 10km à 30km</option>
+        <option value='loins'>+ 30km</option>
+        </select>
 
     	<label for='surface'>Surface</label>
         <select name='surface' id='surface'>

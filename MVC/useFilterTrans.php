@@ -21,11 +21,6 @@
 			}*/
 			$condition = " AND ";
 		}
-		
-		// Filtre Localisation
-		if ($_POST['localisation'] != ""){
-			$sql = $sql." AND localisation = '".$_POST['localisation']."'";
-		}
 
 		// Filtre Surface
 		if ($_POST['surface'] != ""){

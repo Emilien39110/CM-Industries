@@ -34,7 +34,7 @@
 <table class='honoraire'>
     <tr>
         <td>Visite et constitution du dossier</td>
-        <td>5€/m²</td>
+        <td>8€/m²</td>
     </tr>
     <tr>
         <td>Rédaction du bail</td>
@@ -45,4 +45,6 @@
         <td>3€/m²</td>
     </tr>
 </table>
-<h1>Pour une estimation : 240.00€</h1>
+<section class='honoraire_title'>
+<h1>Pour une estimation : 120.00€</h1>
+</section>
