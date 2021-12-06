@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 function send_mail($to_, $subject_, $content_) {
-	
+
 	$cpw = mysqli_connect("localhost", "l2", "L2", "bernier_info301_tp1");
 	mysqli_set_charset($cpw, "utf8");	
 	$sql_pw = "SELECT * FROM `td3_maisons` WHERE idhouse = 1";
