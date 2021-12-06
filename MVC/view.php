@@ -12,18 +12,20 @@
 	<header>
     <img src='./IMAGES/logo.PNG'/>
 	    Votre Agence immobilière au plus près de chez vous
-        <a href=".?page=connexion">
+        
             <?php
             if (isset($_SESSION['user'])){
                 echo "</br><form method='post'><input type='submit' name='logOutButton' value='Se déconnecter' id='deco'></form></br>";
                 if (isset($_POST['logOutButton']))
                     unset($_SESSION['user']);
             }else{
-                echo "</br><h7>Se connecter<h7></br>";
+                echo "<a href='.?page=connexion'>";
+                echo "</br><h7>Se connecter<h7></br></br>";
+                echo "</a>";
             }
 
             // echo  "</br>".$_SESSION['state']."</br>";
-            ?></a>
+            ?>
 
         <nav class="menu">
             <ul>
