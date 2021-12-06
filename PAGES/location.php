@@ -10,6 +10,7 @@
             echo "<input type='checkbox' name='maisonFilter_Trans'>";
         }
         ?>
+        
         </p>
         <p>Appartement
             <?php 
