@@ -29,6 +29,7 @@
         }
         ?>
         </p>
+
         <label>Prix</label>
         <?php 
         //Affiche les prix minimum et maximum en gardant la valeur précédente entrée
@@ -37,6 +38,7 @@
         }else{
             echo "<input type='number' name='minimumPrice_Trans' min=0 value=0>";
         }
+        ?>
 
         <label>Prix</label>
         <?php 
