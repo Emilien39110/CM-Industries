@@ -6,10 +6,7 @@
 header{
 	text-align: center;
 	background: linear-gradient(90deg, rgba(199,199,199,1) 0%, rgba(135,148,149,1) 50%, rgba(226,235,234,1) 100%);
-	color : white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
-    background-color: #dcdcde;
 	}
 nav ul {
     display : flex;
@@ -214,4 +211,22 @@ footer{
 }
 .ajout h2{
     text-align : center;
+}
+
+section div{
+    display: inline-block;
+    padding-right: 50px;
+}
+
+section div h1 {
+    font-size: 50px;
+    max-width: 700px;
+    color : white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#logo{
+    width : 250px;
+    padding-top: 10px;
+    margin-right: 0px;
 }

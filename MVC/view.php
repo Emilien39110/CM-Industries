@@ -10,9 +10,16 @@
 </head>
 <body>
 	<header>
-    <img src='./IMAGES/logo.PNG'/>
-	    Votre Agence immobilière au plus près de chez vous
-        <a href=".?page=connexion">
+        <section>
+            <div>
+            <img src='./IMAGES/logo.PNG' id='logo'/>
+            </div>
+            <div>
+            <h1>Votre Agence immobilière au plus près de chez vous</h1>
+            </div>
+            <div>
+
+            <a href=".?page=connexion">
             <?php
             if (isset($_SESSION['user'])){
                 echo "</br><form method='post'><input type='submit' name='logOutButton' value='Se déconnecter' id='deco'></form></br>";
@@ -24,6 +31,8 @@
 
             // echo  "</br>".$_SESSION['state']."</br>";
             ?></a>
+            </div>
+        </section>
 
         <nav class="menu">
             <ul>
