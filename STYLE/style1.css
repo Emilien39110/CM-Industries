@@ -121,10 +121,10 @@ footer{
 }
 
 .recherche{
-    margin-top: 10px;
-    margin-right: 5%;
-    background-color: #b6b6fc /*rgb(165,255,149)*/;
+    margin-top : 10px;
+    background-color: #ccccd7;
     padding: 10px;
+    border : black 2px solid ;
 }
 .recherche label{
     display: flex;
