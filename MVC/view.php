@@ -10,6 +10,7 @@
 </head>
 <body>
 	<header>
+    <img src='./IMAGES/logo.PNG'/>
 	    Votre Agence immobilière au plus près de chez vous
         <a href=".?page=connexion">
             <?php
