@@ -218,7 +218,7 @@ function DisplayRdvPris ($list) {
 				echo "<td>".$value[$i]["mail"]."</td></br>";
 			}
 		}
-		echo "</ul>";
+		echo "</ul> </br>";
 	}
 
 	echo "<form action='./MVC/removerdv.php' method='post'>
