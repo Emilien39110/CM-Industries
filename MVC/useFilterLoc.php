@@ -60,6 +60,11 @@
 			$sql = $sql.')';
 		}
 		
+		// Filtre Localisation
+		if ($_POST['localisation'] != ""){
+			$sql = $sql." AND localisation = '".$_POST['localisation']."'";
+		}
+
 		// Filtre Surface
 		if ($_POST['surface'] != ""){
 			if ($_POST['surface'] == "petit") $sql = $sql." AND surface < 20";
@@ -67,7 +72,7 @@
 			else if ($_POST['surface'] == "grand")$sql = $sql." AND surface >= 50";
 		}
 	}
-	//var_dump($sql);
+	var_dump($sql);
 	$result=mysqli_query($c,$sql);
 	while($row = mysqli_fetch_assoc($result))
 		$list[] = $row;

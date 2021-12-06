@@ -5,8 +5,8 @@ $page = "home";
 if (isset($_GET['page'])) 
 	$page = $_GET['page'];
 
-$locations = LoadLocations();
-$transactions = LoadTransactions();
+$locations = LoadLocations ();
+$transactions = LoadTransactions ();
 
 $rdv = LoadRdv();
 
@@ -62,10 +62,38 @@ if ($register) {
 //Se déconnecter
 if(isset($_POST['logOutButton'])) {
 	unset($_SESSION['user']);
-	unset($_SESSION['admin']);
 	header("Location: .");
 }
 
-/*if (isset($_GET['page=connexion'])){
-	unset($_SESSION['user']);
-}*/
+//Filtres
+$sqlFilterRequest = "SELECT * FROM `location_vente`";
+$sqlFilterCount = 0;
+
+//-----PRIX MINIMUM ET MAXIMUM--------------------------------------
+//Prix minimum
+if (isset($_POST["minimumPrice"]) and $_POST["minimumPrice"] != 0) {
+	if ($sqlFilterCount == 0) { //Si on est la première condition, on doit insérer un "WHERE"
+		$sqlFilterRequest = $sqlFilterRequest." WHERE (price >".$_POST["minimumPrice"];
+	}else{
+		$sqlFilterRequest = $sqlFilterRequest." AND (price >".$_POST["minimumPrice"];
+	}
+	$sqlFilterCount = $sqlFilterCount + 1;
+}
+
+//Prix maximum
+if (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0) {
+	if ($sqlFilterCount == 0) { //Si on est la première condition, on doit insérer un "WHERE"
+		$sqlFilterRequest = $sqlFilterRequest." WHERE (price <".$_POST["maximumPrice"];
+	}else{
+		$sqlFilterRequest = $sqlFilterRequest." AND price <".$_POST["maximumPrice"];
+	}
+	$sqlFilterCount = $sqlFilterCount + 1;
+}
+
+//Fermer la parenthèse de la condition si il y a un prix minimum ou maximum
+if ((isset($_POST["minimumPrice"]) and $_POST["minimumPrice"] != 0) or (isset($_POST["maximumPrice"]) and $_POST["maximumPrice"] != 0)) {
+	$sqlFilterRequest = $sqlFilterRequest.")";
+}
+
+
+//------------------------------------------------------------------
