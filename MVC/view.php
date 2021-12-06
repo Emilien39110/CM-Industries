@@ -26,13 +26,18 @@
                 if (isset($_POST['logOutButton']))
                     unset($_SESSION['user']);
             }else{
-                echo "</br><h7>Se connecter<h7></br>";
+                echo "<a href='.?page=connexion'>";
+                echo "</br><h7>Se connecter<h7></br></br>";
+                echo "</a>";
             }
 
             // echo  "</br>".$_SESSION['state']."</br>";
-            ?></a>
+
+            ?>
+            </a>
             </div>
         </section>
+
 
         <nav class="menu">
             <ul>
