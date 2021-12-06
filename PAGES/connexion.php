@@ -1,3 +1,4 @@
+<article class="ajout">
 <?php
     if (isset($_SESSION["user"])) {
         echo "<p>".$_SESSION["user"]."</p>";
@@ -20,3 +21,5 @@ else {
         $_SESSION["state"]="Se déconnecter";
 }
 
+?>
+</article>
