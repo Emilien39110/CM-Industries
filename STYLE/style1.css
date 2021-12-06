@@ -226,7 +226,7 @@ section div h1 {
 }
 
 .imhouse{
-    height: 400px;
+    max-width: 25em;
     margin-top: 10px;
 }
 #logo{
