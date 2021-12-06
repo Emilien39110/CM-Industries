@@ -1,4 +1,4 @@
-<p>Login</p>
+<h2>Login</h2>
 
 <?php 
 	if (isset($_SESSION["LOGIN_ERROR_SAFE"])) {

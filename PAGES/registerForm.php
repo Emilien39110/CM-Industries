@@ -1,4 +1,4 @@
-<p>Register</p>
+<h2>Register</h2>
 <?php 
 	if (isset($_SESSION["REGISTER_ERROR_SAFE"])) {
 		if ($_SESSION["REGISTER_ERROR_SAFE"] > 0) {
