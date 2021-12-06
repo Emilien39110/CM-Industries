@@ -66,6 +66,13 @@
         <option value='terrain'>Terrain</option>
         </select></br></br>
     </div>
+
+    <div>
+        <label>surface</label>
+        <input type='integer' name='surface'>
+    </div>
+
+
     <div>
         <label for='choix3' id='ok'>Location/vente</label></br>
         <select name='location' id='choix3'>
