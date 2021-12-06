@@ -114,7 +114,7 @@ function DisplayRdvLibre ($list) {
 		echo "<td> <b>".$key."</b> </td>";
 		for ($i=0; $i < count($value); $i++) { 
 			if ($value[$i]["etat"] == "libre") {
-				echo "<td>".$value[$i]["horaire"]."h</td>";
+				echo "<td>".$value[$i]["horaire"]."h / </td>";
 			}
 		}
 		echo "</ul> </br>";
@@ -213,8 +213,8 @@ function DisplayRdvPris ($list) {
 		echo "<td> <b>".$key."</b> </td></br>";
 		for ($i=0; $i < count($value); $i++) { 
 			if ($value[$i]["etat"] == "pris") {
-				echo "<td>".$value[$i]["horaire"]."h  </td>";
-				echo "<td>".$value[$i]["info"]."</td>";
+				echo "<td>".$value[$i]["horaire"]."h - </td>";
+				echo "<td>".$value[$i]["info"]."</td> - ";
 				echo "<td>".$value[$i]["mail"]."</td></br>";
 			}
 		}
