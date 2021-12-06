@@ -20,33 +20,34 @@ function LoadTransactions () {
 }
 
 function DisplayDonnees ($list) {
-	if ($list == null) {
-		echo "<article> <h2> Aucun résultat ne correpond à votre recherche. </h2> </article>";
-	} else {
+	if ($list == null){
+		echo "<article><h2>Aucun résultat ne correspond à votre recherche.</h2></article>";
+	}else {
 		foreach ($list as $key => $value) {
-			echo "<article class='background'>";
-			echo "<h2>".$value["name"]."</h2>";
-			echo "<p><b>Localisation : </b>".$value["localisation"]."</p>";
-			echo "<p><b>Description :</b> ".$value["description"]."</p>";
-			echo "<p><b>Prix : </b>".$value["price"]." €</p>";
-			echo "<section><p class='gras'>Consommation energie :</p>";
-			echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
-			echo "<section><p class='gras'>GreenHouse :</p>";
-			echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
-			if (is_dir('./IMAGES/'.$value['name'])) { 
-				$tablofichier =scandir('./IMAGES/'.$value['name']);
-				foreach ($tablofichier as  $elmtablofichier ){
-					if ($elmtablofichier != '.' && $elmtablofichier != '..') {
-						echo "<section><p class='gras'>Image du bien :</p>";
-						echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";
-					}
+		echo "<article class='background'>";
+		echo "<h2>".$value["name"]."</h2>";
+		echo "<p><b>Localisation : </b>".$value["localisation"]."</p>";
+		echo "<p><b>Description :</b> ".$value["description"]."</p>";
+		echo "<p><b>Prix : </b>".$value["price"]." €</p>";
+		echo "<section><p class='gras'>Consommation energie :</p>";
+		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
+		echo "<section><p class='gras'>GreenHouse :</p>";
+		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
+		if (is_dir('./IMAGES/'.$value['name'])) { 
+			$tablofichier =scandir('./IMAGES/'.$value['name']);
+			foreach ($tablofichier as  $elmtablofichier ){
+				if ($elmtablofichier != '.' && $elmtablofichier != '..') {
+					echo "<section><p class='gras'>Image du bien :</p>";
+					echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";	
 				}
 			}
-			//-------------------------------------------------------------------------------------------------------
+		}
+		//-------------------------------------------------------------------------------------------------------
 
-			echo "</article>";
+		echo "</article>";
 		}
 	}
+	
 }
 
 function LoadRdv () {
@@ -118,6 +119,7 @@ function DisplayRdvLibre ($list) {
 		}
 		echo "</ul>";
 	}
+	echo "</br><h2>Réserver un créneau : </h2>";
 
 	echo "<form action='./MVC/takerdv.php' method='post'>
 			<select name='horaire' id='horaire-select'>
@@ -135,7 +137,7 @@ function DisplayRdvLibre ($list) {
 			<option value='Acheter un bien '>Acheter un bien</option>
 			<option value='Louer un bien '>Louer un bien</option>
 			<option value='Estimation '>Estimation</option>
-			</select> <br/>";
+			</select></br>";
 	if(isset($_SESSION['error_type']))
 		echo "<p>".$_SESSION['error_type']."</p>";
 	echo "<input type='submit' name='action' value='Reserver'>";

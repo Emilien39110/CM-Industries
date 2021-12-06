@@ -9,6 +9,7 @@ header{
 	color : white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
+    background-color: #dcdcde;
 	}
 nav ul {
     display : flex;
@@ -48,6 +49,7 @@ nav a:link, nav a:visited{
 body {
     margin: 2px;
     padding: 2px;
+    background-color: #c7c7c7;
 }
 
 section{
@@ -124,7 +126,7 @@ footer{
 .recherche{
     margin-top: 10px;
     margin-right: 5%;
-    background-color: rgb(165,255,149) ;
+    background-color: #b6b6fc /*rgb(165,255,149)*/;
     padding: 10px;
 }
 .recherche label{
@@ -144,7 +146,8 @@ footer{
     border-bottom: black solid 1px;
     margin: 10px;
     padding: 10px;
-    background-color:rgb(199,199,199) ;
+    background-color:#9e9e9e;
+    text-align : center;
 }
 
 #home{
@@ -187,4 +190,28 @@ footer{
     text-align: center;
     margin : 10px;
 
+}
+.ajout {
+    background-color: #ccccd7;
+    max-width: 400px;
+    padding : 1vw;
+    border: solid 2px black;
+    list-style: none;
+    margin : 50 px;
+    margin-left : auto;
+    margin-right : auto;
+    margin-bottom : 15px;
+    margin-top : 15px;
+    justify-content: center;
+}
+#bold{   
+    font-size: 30px;
+    border-bottom: black solid 1px;
+    margin: 10px;
+    padding: 10px;
+    background-color:#9e9e9e;
+    text-align : center;
+}
+.ajout h2{
+    text-align : center;
 }
