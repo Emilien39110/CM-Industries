@@ -38,16 +38,6 @@
         }else{
             echo "<input type='number' name='minimumPrice_Trans' min=0 value=0>";
         }
-        ?>
-
-        <label>Prix</label>
-        <?php 
-        //Affiche les prix minimum et maximum en gardant la valeur précédente entrée
-        if (isset($_SESSION['minimumPriceFilter_Trans'])) {
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=".$_SESSION['minimumPriceFilter_Trans'].">";
-        }else{
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=0>";
-        }
 
         if (isset($_SESSION['maximumPriceFilter_Trans'])) {
             echo "<input type='number' name='maximumPrice_Trans' min=0 value=".$_SESSION['maximumPriceFilter_Trans'].">";
