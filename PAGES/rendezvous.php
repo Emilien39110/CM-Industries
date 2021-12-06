@@ -1,4 +1,4 @@
-<section id="rdv">
+<section class="ajout">
 	<h2>Horaire de rendez-vous disponible : </h2>
 
 	<?php
