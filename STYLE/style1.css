@@ -225,6 +225,10 @@ section div h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.imhouse{
+    height: 400px;
+    margin-top: 10px;
+}
 #logo{
     width : 250px;
     padding-top: 10px;
