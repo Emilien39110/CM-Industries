@@ -38,7 +38,7 @@ function DisplayDonnees ($list) {
 				foreach ($tablofichier as  $elmtablofichier ){
 					if ($elmtablofichier != '.' && $elmtablofichier != '..') {
 						echo "<section><p class='gras'>Image du bien :</p>";
-						echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";	
+						echo "<img src='./IMAGES/" . $value['name'] . "/". $elmtablofichier . "' alt='imhouse' class='imhouse'/></section>";
 					}
 				}
 			}
@@ -135,7 +135,7 @@ function DisplayRdvLibre ($list) {
 			<option value='Acheter un bien '>Acheter un bien</option>
 			<option value='Louer un bien '>Louer un bien</option>
 			<option value='Estimation '>Estimation</option>
-			</select>";
+			</select> <br/>";
 	if(isset($_SESSION['error_type']))
 		echo "<p>".$_SESSION['error_type']."</p>";
 	echo "<input type='submit' name='action' value='Reserver'>";
