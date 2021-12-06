@@ -117,7 +117,7 @@ function DisplayRdvLibre ($list) {
 				echo "<td>".$value[$i]["horaire"]."h</td>";
 			}
 		}
-		echo "</ul>";
+		echo "</ul> </br>";
 	}
 	echo "</br><h2>Réserver un créneau : </h2>";
 
