@@ -68,8 +68,8 @@
     </div>
 
     <div>
-        <label>surface</label>
-        <input type='integer' name='surface'>
+        <label>Surface</label></br>
+        <input type='integer' name='surface'></br></br>
     </div>
 
 
@@ -79,7 +79,7 @@
         <option value=''>--Choisir une option--</option>
         <option value='1'>Location</option>
         <option value='0'>Vente</option>
-        </select></br></br>
+        </select>
     </div>
     <div>
         </br><input type='submit' name='action' value='envoyer'/>
