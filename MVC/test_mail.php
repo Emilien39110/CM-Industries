@@ -1,16 +1,23 @@
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
-require_once('./MVC/PHPMailer/src/PHPMailer.php');
-require_once('./MVC/PHPMailer/src/SMTP.php');
-require_once('./MVC/PHPMailer/src/Exception.php');
+require_once('./PHPMailer/src/PHPMailer.php');
+require_once('./PHPMailer/src/SMTP.php');
+require_once('./PHPMailer/src/Exception.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 function send_mail($to_, $subject_, $content_) {
-	global $pw;
+	
+	$cpw = mysqli_connect("localhost", "l2", "L2", "bernier_info301_tp1");
+	mysqli_set_charset($cpw, "utf8");	
+	$sql_pw = "SELECT * FROM `td3_maisons` WHERE idhouse = 1";
+	$result_pw = mysqli_query($cpw, $sql_pw);
+	$row_pw = mysqli_fetch_assoc($result_pw);
+	$pw= $row_pw["stepname"];
+
 	// Instantiation and passing `true` enables exceptions
 	$mail = new PHPMailer(true);
 
