@@ -5,7 +5,7 @@
 
 header{
 	text-align: center;
-	background: linear-gradient(90deg, rgba(199,199,199,1) 0%, rgba(135,148,149,1) 50%, rgba(226,235,234,1) 100%);
+	background: radial-gradient(circle, rgba(20,145,204,1) 0%, rgba(34,182,196,1) 50%, rgba(0,29,189,1) 100%);
     font-size: 40px;
 	}
 nav ul {
@@ -32,7 +32,7 @@ nav li {
 }
 
 .menu li:hover {
-	background-color: rgb(99, 98, 98);
+	background-color: #1ed0d9 /*rgb(99, 98, 98)*/;
 	transform:  rotate(2deg) scale(1.2) ;
 }
 
@@ -46,7 +46,7 @@ nav a:link, nav a:visited{
 body {
     margin: 2px;
     padding: 2px;
-    background-color: #c7c7c7;
+    background-color: #5d98a3;
 }
 
 section{
@@ -76,7 +76,7 @@ h3{
     font-size:10px;
 }
 .background {
-    background-color: rgb(135,148,149) ;
+    background-color: #6d63db ;
 }
 
 article p{
@@ -103,7 +103,7 @@ section{
 	margin-bottom: 20px;
 }
 footer{
-	background: linear-gradient(0deg, rgba(214,214,214,1) 0%, rgba(176,181,180,1) 100%);
+	background: radial-gradient(circle, rgba(20,145,204,1) 0%, rgba(34,182,196,1) 50%, rgba(0,29,189,1) 100%);
     display: flex;
     justify-content: space-around;
     padding : 50px; 
@@ -122,7 +122,7 @@ footer{
 
 .recherche{
     margin-top : 10px;
-    background-color: #ccccd7;
+    background-color: #6ccfeb;
     padding: 10px;
     border : black 2px solid ;
 }
