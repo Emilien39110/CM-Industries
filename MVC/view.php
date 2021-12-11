@@ -68,12 +68,16 @@
             if ($permPages[$page]=="user"){
                 if (isset($_SESSION['user'])){
                     include "PAGES/".$page.".php";
+                } else {
+                    include "PAGES/connexion.php";
                 }
             } else if ($permPages[$page]=="admin"){
                 if (isset($_SESSION['user'])){
                     if (isset($_SESSION['admin']) and ($_SESSION['admin']==1)){
                         include "PAGES/".$page.".php";
                     }
+                } else {
+                    include "PAGES/connexion.php";
                 }
             } else {
                 include "PAGES/".$page.".php";
