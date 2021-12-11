@@ -1,5 +1,6 @@
 <?php
 //unset($_SESSION['state']);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +52,7 @@
             echo "<a href='.?page=rendezvous'><li>Prise de rendez-vous</li></a>";
             if (isset($_SESSION["admin"])){
                 if ($_SESSION['admin'] == 1) {
-                        echo "<a href='.?page=new'><li>Admin</li></a>";
+                        echo "<a href='.?page=admin'><li>Admin</li></a>";
                 }
             }
 
@@ -63,7 +64,21 @@
 
 	<main>
 		<?php
-			include "PAGES/".$page.".php";
+        $permPages = ["home" => "pub", "honoraire" => "pub", "location" => "pub", "transaction" => "pub", "rendezvous" => "user", "admin" => "admin", "connexion" => "pub"];
+            if ($permPages[$page]=="user"){
+                if (isset($_SESSION['user'])){
+                    include "PAGES/".$page.".php";
+                }
+            } else if ($permPages[$page]=="admin"){
+                if (isset($_SESSION['user'])){
+                    if (isset($_SESSION['admin']) and ($_SESSION['admin']==1)){
+                        include "PAGES/".$page.".php";
+                    }
+                }
+            } else {
+                include "PAGES/".$page.".php";
+            }
+			//include "PAGES/".$page.".php";
 		?>
     	</main>
 
