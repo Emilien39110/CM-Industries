@@ -1,14 +1,16 @@
 <?php
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	mkdir("../IMAGES/".$_POST['nom']);
-	$uploaddir = '../IMAGES/'.$_POST['nom'].'/';
-	$uploadfile1 = $uploaddir . basename($_FILES['fichierimage1']['name']);
-	move_uploaded_file($_FILES['fichierimage1']['tmp_name'], $uploadfile1);
-	$uploadfile2 = $uploaddir . basename($_FILES['fichierimage2']['name']);
-	move_uploaded_file($_FILES['fichierimage2']['tmp_name'], $uploadfile2);
-	$uploadfile3 = $uploaddir . basename($_FILES['fichierimage3']['name']);
-	move_uploaded_file($_FILES['fichierimage3']['tmp_name'], $uploadfile3);
 
+	if (($_FILES['fichierimage1']['size'] != 0 ) or ($_FILES['fichierimage2']['size'] != 0) or ($_FILES['fichierimage3'] ['size'] != 0)) {
+		mkdir("../IMAGES/".$_POST['nom']);
+		$uploaddir = '../IMAGES/'.$_POST['nom'].'/';
+		for ($i = 1; $i <= 3; $i++) {
+			if ($_FILES['fichierimage'.$i.'']['size'] != 0){
+				$uploadfile = $uploaddir . basename($_FILES['fichierimage'.$i]['name']);
+				move_uploaded_file($_FILES['fichierimage'.$i]['tmp_name'], $uploadfile);
+			}
+		}
+	}
+	
 	$estvendu = 0;
 
 	$c = mysqli_connect("localhost", "l2", "L2", "CMIndustries");
