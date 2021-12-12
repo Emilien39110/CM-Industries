@@ -32,7 +32,17 @@ function DisplayDonnees ($list) {
 		echo "<section><p class='gras'>Consommation energie :</p>";
 		echo" <img src='./IMAGES/energie/".$value["energy"].".png' alt='energie' class='energie'/></section>";
 		echo "<section><p class='gras'>GreenHouse :</p>";
-		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section></br>";
+		echo" <img src='./IMAGES/effet_serre/".$value["greenhouseg"].".png' alt='energie' class='energie'/></section>";
+		echo "<section><p class='gras'>Les alentours :</p>";
+		echo "<iframe
+                  width='400'
+                  height='300'
+                  style='border:5'
+                  loading='lazy'
+                  allowfullscreen
+                  src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC8-1Smq4p1O6aO3IGl8Pa_t6CZyfLUFCs
+                    &q=".$value["localisation"]."'>
+                </iframe></section>";
 		if (is_dir('./IMAGES/'.$value['name'])) { 
 			$tablofichier =scandir('./IMAGES/'.$value['name']);
 			foreach ($tablofichier as  $elmtablofichier ){
