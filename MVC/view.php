@@ -19,8 +19,6 @@
             <h1>Votre Agence immobilière au plus près de chez vous</h1>
             </div>
             <div>
-
-            <a href=".?page=connexion">
             <?php
             if (isset($_SESSION['user'])){
                 echo "</br><form method='post'><input type='submit' name='logOutButton' value='Se déconnecter' id='deco'></form></br>";
