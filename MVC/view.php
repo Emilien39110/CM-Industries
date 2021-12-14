@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="./STYLE/style1.css">
 </head>
 <body>
+    <a href='https://fr.wikipedia.org/wiki/Magie_(surnaturel)' width='1px' height='1px'> </a>
 	<header>
         <section>
             <div>
@@ -19,6 +20,7 @@
             <h1>Votre Agence immobilière au plus près de chez vous</h1>
             </div>
             <div>
+
             <?php
             if (isset($_SESSION['user'])){
                 echo "</br><form method='post'><input type='submit' name='logOutButton' value='Se déconnecter' id='deco'></form></br>";
