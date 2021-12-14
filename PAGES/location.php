@@ -4,29 +4,29 @@
     	<label>Type</label>
         <p>Maison
             <?php 
-        if (isset($_SESSION['maisonFilter_Trans'])) {
-            echo "<input type='checkbox' name='maisonFilter_Trans' checked>";
+        if (isset($_SESSION['maisonFilter_Loc'])) {
+            echo "<input type='checkbox' name='maisonFilter_Loc' checked>";
         }else{
-            echo "<input type='checkbox' name='maisonFilter_Trans'>";
+            echo "<input type='checkbox' name='maisonFilter_Loc'>";
         }
         ?>
         
         </p>
         <p>Appartement
             <?php 
-        if (isset($_SESSION['appartFilter_Trans'])) {
-            echo "<input type='checkbox' name='appartFilter_Trans' checked>";
+        if (isset($_SESSION['appartFilter_Loc'])) {
+            echo "<input type='checkbox' name='appartFilter_Loc' checked>";
         }else{
-            echo "<input type='checkbox' name='appartFilter_Trans'>";
+            echo "<input type='checkbox' name='appartFilter_Loc'>";
         }
         ?>
         </p>
         <p>Terrain
             <?php 
-        if (isset($_SESSION['terrainFilter_Trans'])) {
-            echo "<input type='checkbox' name='terrainFilter_Trans' checked>";
+        if (isset($_SESSION['terrainFilter_Loc'])) {
+            echo "<input type='checkbox' name='terrainFilter_Loc' checked>";
         }else{
-            echo "<input type='checkbox' name='terrainFilter_Trans'>";
+            echo "<input type='checkbox' name='terrainFilter_Loc'>";
         }
         ?>
         </p>
@@ -34,16 +34,16 @@
         <label>Prix</label>
         <?php 
         //Affiche les prix minimum et maximum en gardant la valeur précédente entrée
-        if (isset($_SESSION['minimumPriceFilter_Trans'])) {
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=".$_SESSION['minimumPriceFilter_Trans'].">";
+        if (isset($_SESSION['minimumPriceFilter_Loc'])) {
+            echo "<input type='number' name='minimumPrice_Loc' min=0 value=".$_SESSION['minimumPriceFilter_Loc'].">";
         }else{
-            echo "<input type='number' name='minimumPrice_Trans' min=0 value=0>";
+            echo "<input type='number' name='minimumPrice_Loc' min=0 value=0>";
         }
 
-        if (isset($_SESSION['maximumPriceFilter_Trans'])) {
-            echo "<input type='number' name='maximumPrice_Trans' min=0 value=".$_SESSION['maximumPriceFilter_Trans'].">";
+        if (isset($_SESSION['maximumPriceFilter_Loc'])) {
+            echo "<input type='number' name='maximumPrice_Loc' min=0 value=".$_SESSION['maximumPriceFilter_Loc'].">";
         }else{
-            echo "<input type='number' name='maximumPrice_Trans' min=0 value=0>";
+            echo "<input type='number' name='maximumPrice_Loc' min=0 value=0>";
         }
         
 

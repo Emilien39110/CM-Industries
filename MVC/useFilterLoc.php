@@ -10,50 +10,50 @@
 	$condition = " AND ";
 	if (isset ($_POST)) {
 		//Si on a définit un prix minimum, on ajoute la condition
-		if ($_POST['minimumPrice_Trans'] > 0) {
-			$sql=$sql.' AND price >= '.$_POST['minimumPrice_Trans'];
+		if ($_POST['minimumPrice_Loc'] > 0) {
+			$sql=$sql.' AND price >= '.$_POST['minimumPrice_Loc'];
 		}
-		$_SESSION['minimumPriceFilter_Trans'] = $_POST['minimumPrice_Trans'];
+		$_SESSION['minimumPriceFilter_Loc'] = $_POST['minimumPrice_Loc'];
 
 		//Si on a définit un prix maximum, on ajoute la condition
-		if ($_POST['maximumPrice_Trans'] > 0) {
-			$sql=$sql.' AND price <= '.$_POST['maximumPrice_Trans'];
+		if ($_POST['maximumPrice_Loc'] > 0) {
+			$sql=$sql.' AND price <= '.$_POST['maximumPrice_Loc'];
 		}
-		$_SESSION['maximumPriceFilter_Trans'] = $_POST['maximumPrice_Trans'];
+		$_SESSION['maximumPriceFilter_Loc'] = $_POST['maximumPrice_Loc'];
 
 		$firstTypeCondition = False;
-		unset($_SESSION['maisonFilter_Trans']);
-		unset($_SESSION['appartFilter_Trans']);
-		unset($_SESSION['terrainFilter_Trans']);
+		unset($_SESSION['maisonFilter_Loc']);
+		unset($_SESSION['appartFilter_Loc']);
+		unset($_SESSION['terrainFilter_Loc']);
 
-		if (isset($_POST['maisonFilter_Trans'])) {
+		if (isset($_POST['maisonFilter_Loc'])) {
 			if ($firstTypeCondition == False) {
 				$sql=$sql." AND (type = 'maison'";
 				$firstTypeCondition = True;
 			}else{
 				$sql=$sql." OR type = 'maison'";
 			}
-			$_SESSION['maisonFilter_Trans'] = True;
+			$_SESSION['maisonFilter_Loc'] = True;
 		}
 
-		if (isset($_POST['appartFilter_Trans'])) {
+		if (isset($_POST['appartFilter_Loc'])) {
 			if ($firstTypeCondition == False) {
 				$sql=$sql." AND (type = 'appartement'";
 				$firstTypeCondition = True;
 			}else{
 				$sql=$sql." OR type = 'appartement'";
 			}
-			$_SESSION['appartFilter_Trans'] = True;
+			$_SESSION['appartFilter_Loc'] = True;
 		}
 
-		if (isset($_POST['terrainFilter_Trans'])) {
+		if (isset($_POST['terrainFilter_Loc'])) {
 			if ($firstTypeCondition == False) {
 				$sql=$sql." AND (type = 'terrain'";
 				$firstTypeCondition = True;
 			}else{
 				$sql=$sql." OR type = 'terrain'";
 			}
-			$_SESSION['terrainFilter_Trans'] = True;
+			$_SESSION['terrainFilter_Loc'] = True;
 		}
 
 		if ($firstTypeCondition) {
