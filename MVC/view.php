@@ -39,7 +39,6 @@
         <nav class="menu">
             <ul>
                 <a href=".?page=home"><li>Accueil</li></a>
-                <a href=".?page=architecture"><li>Architecture</li></a>
                 <a href=".?page=location"><li>Location</li></a>
                 <a href=".?page=transaction"><li>Transaction</li></a>
                 <a href=".?page=honoraire"><li>Honoraires</li></a>              
