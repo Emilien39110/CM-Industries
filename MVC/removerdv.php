@@ -8,7 +8,7 @@
 	$adresse = $_SERVER['REQUEST_URI'];
 	$script_courant = basename($_SERVER["SCRIPT_FILENAME"], '.php') . ".php";
 	$morceau_a_remplacer = "MVC/" . $script_courant;
-	$a_remplacer_par = "?page=new";
+	$a_remplacer_par = "?page=admin";
 	$resultat = str_replace($morceau_a_remplacer, $a_remplacer_par, $adresse);
 	header("location:" . $resultat);
 ?>

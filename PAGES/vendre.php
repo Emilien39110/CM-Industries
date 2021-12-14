@@ -8,6 +8,6 @@ $sql = "UPDATE location_vente SET vendu = 1 WHERE idhouse = $id";
 // var_dump($sql);
 $result = mysqli_query($c,$sql);
 // var_dump($result);
-header("Location: ..?page=new");
+header("Location: ..?page=admin");
 
 ?>
