@@ -25,16 +25,13 @@
                 if (isset($_POST['logOutButton']))
                     unset($_SESSION['user']);
             }else{
-                echo "<a href='.?page=connexion'>";
-                echo "</br><h7 id='deco'>Se connecter<h7>";
-                echo "</a>";
-                echo"</br></br>";
+                echo "</br><form action='.?page=connexion' method='post'><input type='submit' name='logInButton' value='Se connecter' id='deco'></form></br>";
             }
 
             // echo  "</br>".$_SESSION['state']."</br>";
 
             ?>
-            </a>
+            
             </div>
         </section>
 
@@ -42,7 +39,6 @@
         <nav class="menu">
             <ul>
                 <a href=".?page=home"><li>Accueil</li></a>
-                <a href=".?page=architecture"><li>Architecture</li></a>
                 <a href=".?page=location"><li>Location</li></a>
                 <a href=".?page=transaction"><li>Transaction</li></a>
                 <a href=".?page=honoraire"><li>Honoraires</li></a>              
