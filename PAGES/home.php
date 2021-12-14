@@ -1,7 +1,5 @@
 <!-- bannières, promotions, "en ce moment dans votre ...." etc..... -->
 
-<h1>Actualités</h1>
-
 	<div class="actu">
 		<h3>Ouverture</h3>
 		<p><img src="./IMAGES/Composition1.jpg" alt="Ouverture"/></p>

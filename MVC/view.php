@@ -13,7 +13,7 @@
 	<header>
         <section>
             <div>
-            <img src='./IMAGES/logo.PNG' id='logo'/>
+            <!-- <img src='./IMAGES/logo.png' id='logo'/> -->
             </div>
             <div>
             <h1>Votre Agence immobilière au plus près de chez vous</h1>
@@ -28,8 +28,9 @@
                     unset($_SESSION['user']);
             }else{
                 echo "<a href='.?page=connexion'>";
-                echo "</br><h7>Se connecter<h7></br></br>";
+                echo "</br><h7 id='deco'>Se connecter<h7>";
                 echo "</a>";
+                echo"</br></br>";
             }
 
             // echo  "</br>".$_SESSION['state']."</br>";
@@ -142,6 +143,7 @@
         </article>
         <article>
         <section>
+                <img src='./IMAGES/logo1.png' id='logo'/>
             <h2>Pour nous contacter : </h2>
             <p>Mail : sophie.bailly32@gmail.com</p>
             <p>Téléphone : 07.61.84.68.48</p>
@@ -153,8 +155,11 @@
                 <a href="https://www.facebook.com/Sophimmo-249689356927183"><img src="./IMAGES/facebook.png" class="network"/></a></br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.728498853055!2d6.3391884154824485!3d46.908057679144605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478da3334c4a79ad%3A0xfe044134c0525881!2sRue%20de%20Salins%2C%2025300%20Pontarlier!5e0!3m2!1sfr!2sfr!4v1638793049820!5m2!1sfr!2sfr" width="400" height="300" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
             </p>
+            <p>&copy CMIndustries<p>
         </section>
         </article>
+        
 	</footer>
+    
 </body>
 </html>
